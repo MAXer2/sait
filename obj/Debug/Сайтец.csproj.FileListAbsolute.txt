@@ -1,0 +1,9 @@
+C:\Users\Student\Downloads\Eldorado-master\bin\Debug\Сайтец.exe.config
+C:\Users\Student\Downloads\Eldorado-master\bin\Debug\Сайтец.exe
+C:\Users\Student\Downloads\Eldorado-master\bin\Debug\Сайтец.pdb
+C:\Users\Student\Downloads\Eldorado-master\obj\Debug\Сайтец.csprojResolveAssemblyReference.cache
+C:\Users\Student\Downloads\Eldorado-master\obj\Debug\Сайтец.Form1.resources
+C:\Users\Student\Downloads\Eldorado-master\obj\Debug\Сайтец.Properties.Resources.resources
+C:\Users\Student\Downloads\Eldorado-master\obj\Debug\Сайтец.csproj.GenerateResource.Cache
+C:\Users\Student\Downloads\Eldorado-master\obj\Debug\Сайтец.exe
+C:\Users\Student\Downloads\Eldorado-master\obj\Debug\Сайтец.pdb
