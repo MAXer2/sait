@@ -15,6 +15,7 @@ namespace Сайтец
         public LoginControl()
         {
             InitializeComponent();
+            //1
         }
     }
 }
