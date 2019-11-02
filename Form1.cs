@@ -73,6 +73,7 @@ namespace Сайтец
             r.Close();
 
 
+
             ProductUserControl product1 = new ProductUserControl();
             product1.Location = new Point(21,210);
             product1.TitleLabel.Text = res[0];
@@ -84,6 +85,9 @@ namespace Сайтец
             product2.TitleLabel.Text = res[4+0];
             product2.PriceLabel.Text = res[4 + 1];
             Controls.Add(product2);
+
+            Form1 f = new Form1();
+            f.ShowDialog();
 
 
             res = new List<string>();
@@ -103,6 +107,26 @@ namespace Сайтец
             textBox14.Text = res[1];
             textBox15.Text = res[2];
 
+
+        }
+
+        private void bannerPictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }
