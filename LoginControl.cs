@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Сайтец
 {
-    public partial class LoginControl : UserControl
+    public partial class LoginUserControl : UserControl
     {
-        public LoginControl()
+        public LoginUserControl()
         {
             InitializeComponent();
             //1

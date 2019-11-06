@@ -26,7 +26,6 @@ namespace Сайтец
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            bannerPictureBox.Image = banners[bannerIndex];
             bannerIndex++;
             if (bannerIndex >= banners.Count)
             {
@@ -54,10 +53,13 @@ namespace Сайтец
             "pwd=Beavis1989;" +
             "old guids=true;";
         private void Form1_Load(object sender, EventArgs e)
-        {
+        {/*
             MySqlConnection CONN = new MySqlConnection(CONNECTION_STRING);
            
-            CONN.Open();
+            while (CONN.State != ConnectionState.Open)
+            { 
+                CONN.Open();
+            }
 
             List<string> res = new List<string>();
             MySqlCommand q = new MySqlCommand("SELECT * FROM Products", CONN);
@@ -86,11 +88,11 @@ namespace Сайтец
             product2.PriceLabel.Text = res[4 + 1];
             Controls.Add(product2);
 
-            Form1 f = new Form1();
-            f.ShowDialog();
+            /*Form1 f = new Form1();
+            f.ShowDialog();*/
 
 
-            res = new List<string>();
+            /*res = new List<string>();
             q = new MySqlCommand("SELECT * FROM Pokupately", CONN);
             r = q.ExecuteReader();
 
@@ -101,11 +103,7 @@ namespace Сайтец
                     res.Add(r[inc].ToString());
                 }
             }
-            r.Close();
-
-            textBox4.Text = res[0];
-            textBox14.Text = res[1];
-            textBox15.Text = res[2];
+            r.Close();*/
 
 
         }
@@ -128,6 +126,32 @@ namespace Сайтец
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuTextbox1_OnTextChange(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuCards1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            SignInForm f = new SignInForm();
+            f.ShowDialog();
+        }
+
+        private void Form1_Scroll(object sender, ScrollEventArgs e)
+        {
+        }
+
+        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+            LoginForm l = new LoginForm();
+            l.ShowDialog();
         }
     }
 }

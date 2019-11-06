@@ -1,6 +1,6 @@
 ﻿namespace Сайтец
 {
-    partial class LoginControl
+    partial class LoginUserControl
     {
         /// <summary> 
         /// Требуется переменная конструктора.
@@ -32,7 +32,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -72,14 +71,6 @@
             this.textBox5.Text = "Пароль";
             this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.DimGray;
-            this.panel1.Location = new System.Drawing.Point(180, -6);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(48, 329);
-            this.panel1.TabIndex = 5;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DimGray;
@@ -92,17 +83,16 @@
             this.button1.Text = "ВОЙТИ";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // LoginControl
+            // LoginUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Name = "LoginControl";
+            this.Name = "LoginUserControl";
             this.Size = new System.Drawing.Size(217, 197);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -115,7 +105,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
     }
 }
