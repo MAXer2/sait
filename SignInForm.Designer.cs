@@ -162,7 +162,6 @@
             this.maskedTextBox2.Size = new System.Drawing.Size(243, 15);
             this.maskedTextBox2.TabIndex = 24;
             this.maskedTextBox2.Text = "Email";
-            this.maskedTextBox2.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox2_MaskInputRejected);
             this.maskedTextBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.maskedTextBox2_MouseClick);
             // 
             // maskedTextBox1

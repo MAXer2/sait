@@ -44,7 +44,7 @@ namespace Сайтец
 
         }
 
-        string CONNECTION_STRING =
+        public static string CONNECTION_STRING =
             "SslMode=none;" +
             "Server=db4free.net;" +
             "database=ingenerka;" +
@@ -52,15 +52,16 @@ namespace Сайтец
             "uid=ingenerka;" +
             "pwd=Beavis1989;" +
             "old guids=true;";
+
+        public static MySqlConnection CONN;
         private void Form1_Load(object sender, EventArgs e)
-        {/*
-            MySqlConnection CONN = new MySqlConnection(CONNECTION_STRING);
-           
+        {
+            CONN = new MySqlConnection(CONNECTION_STRING);           
             while (CONN.State != ConnectionState.Open)
             { 
                 CONN.Open();
             }
-
+            /*
             List<string> res = new List<string>();
             MySqlCommand q = new MySqlCommand("SELECT * FROM Products", CONN);
             MySqlDataReader r = q.ExecuteReader();

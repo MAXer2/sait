@@ -30,8 +30,8 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.passTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.loginTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,8 +47,8 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.maskedTextBox2);
-            this.panel2.Controls.Add(this.maskedTextBox1);
+            this.panel2.Controls.Add(this.passTextBox);
+            this.panel2.Controls.Add(this.loginTextBox);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label2);
@@ -70,29 +70,29 @@
             this.label4.TabIndex = 24;
             this.label4.Text = "Пароль";
             // 
-            // maskedTextBox2
+            // passTextBox
             // 
-            this.maskedTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.maskedTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.maskedTextBox2.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.maskedTextBox2.Location = new System.Drawing.Point(22, 135);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(243, 15);
-            this.maskedTextBox2.TabIndex = 23;
-            this.maskedTextBox2.UseSystemPasswordChar = true;
-            this.maskedTextBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.maskedTextBox2_MouseClick);
+            this.passTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passTextBox.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.passTextBox.Location = new System.Drawing.Point(22, 135);
+            this.passTextBox.Name = "passTextBox";
+            this.passTextBox.Size = new System.Drawing.Size(243, 15);
+            this.passTextBox.TabIndex = 23;
+            this.passTextBox.UseSystemPasswordChar = true;
+            this.passTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.maskedTextBox2_MouseClick);
             // 
-            // maskedTextBox1
+            // loginTextBox
             // 
-            this.maskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.maskedTextBox1.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.maskedTextBox1.Location = new System.Drawing.Point(23, 94);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(243, 15);
-            this.maskedTextBox1.TabIndex = 22;
-            this.maskedTextBox1.Text = "Логин";
-            this.maskedTextBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.maskedTextBox1_MouseClick);
+            this.loginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.loginTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.loginTextBox.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.loginTextBox.Location = new System.Drawing.Point(23, 94);
+            this.loginTextBox.Name = "loginTextBox";
+            this.loginTextBox.Size = new System.Drawing.Size(243, 15);
+            this.loginTextBox.TabIndex = 22;
+            this.loginTextBox.Text = "Логин";
+            this.loginTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.maskedTextBox1_MouseClick);
             // 
             // label3
             // 
@@ -203,7 +203,7 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(181, 5);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(181, 4);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(173)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(150)))), ((int)(((byte)(163)))));
@@ -215,6 +215,7 @@
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // LoginForm
             // 
@@ -244,8 +245,8 @@
         private ns1.BunifuFlatButton bunifuFlatButton2;
         private ns1.BunifuFlatButton bunifuFlatButton1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox loginTextBox;
+        private System.Windows.Forms.MaskedTextBox passTextBox;
         private System.Windows.Forms.Label label4;
 
     }
