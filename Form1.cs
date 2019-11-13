@@ -61,6 +61,10 @@ namespace Сайтец
             { 
                 CONN.Open();
             }
+
+            ProductUserControl product2 = new ProductUserControl();
+            product2.Location = new Point(0, 0);
+            panel6.Controls.Add(product2);
             /*
             List<string> res = new List<string>();
             MySqlCommand q = new MySqlCommand("SELECT * FROM Products", CONN);
@@ -153,6 +157,16 @@ namespace Сайтец
         {
             LoginForm l = new LoginForm();
             l.ShowDialog();
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

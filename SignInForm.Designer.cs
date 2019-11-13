@@ -33,11 +33,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.passTextBox = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.loginTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,6 +46,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton2 = new ns1.BunifuFlatButton();
             this.bunifuFlatButton1 = new ns1.BunifuFlatButton();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -65,13 +65,12 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.maskedTextBox5);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.maskedTextBox4);
+            this.panel2.Controls.Add(this.passTextBox);
             this.panel2.Controls.Add(this.maskedTextBox3);
             this.panel2.Controls.Add(this.maskedTextBox2);
-            this.panel2.Controls.Add(this.maskedTextBox1);
+            this.panel2.Controls.Add(this.loginTextBox);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label6);
@@ -79,6 +78,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.maskedTextBox5);
             this.panel2.Location = new System.Drawing.Point(28, 15);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(428, 390);
@@ -89,67 +89,60 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label5.Location = new System.Drawing.Point(13, 270);
+            this.label5.Location = new System.Drawing.Point(14, 268);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(112, 16);
             this.label5.TabIndex = 28;
             this.label5.Text = "Пароль еще раз";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // maskedTextBox5
             // 
             this.maskedTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.maskedTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.maskedTextBox5.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.maskedTextBox5.Location = new System.Drawing.Point(18, 271);
+            this.maskedTextBox5.Location = new System.Drawing.Point(19, 269);
             this.maskedTextBox5.Name = "maskedTextBox5";
             this.maskedTextBox5.Size = new System.Drawing.Size(243, 15);
             this.maskedTextBox5.TabIndex = 29;
             this.maskedTextBox5.UseSystemPasswordChar = true;
+            this.maskedTextBox5.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox5_MaskInputRejected);
             this.maskedTextBox5.Click += new System.EventHandler(this.maskedTextBox5_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Enabled = false;
-            this.label7.Location = new System.Drawing.Point(13, 276);
+            this.label7.Location = new System.Drawing.Point(14, 274);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(403, 13);
             this.label7.TabIndex = 27;
             this.label7.Text = "__________________________________________________________________";
             // 
-            // label3
+            // passTextBox
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label3.Location = new System.Drawing.Point(12, 234);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 16);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Пароль";
-            // 
-            // maskedTextBox4
-            // 
-            this.maskedTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.maskedTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.maskedTextBox4.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.maskedTextBox4.Location = new System.Drawing.Point(17, 235);
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(243, 15);
-            this.maskedTextBox4.TabIndex = 26;
-            this.maskedTextBox4.UseSystemPasswordChar = true;
-            this.maskedTextBox4.Click += new System.EventHandler(this.maskedTextBox4_Click);
+            this.passTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.passTextBox.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.passTextBox.Location = new System.Drawing.Point(18, 233);
+            this.passTextBox.Name = "passTextBox";
+            this.passTextBox.Size = new System.Drawing.Size(243, 15);
+            this.passTextBox.TabIndex = 26;
+            this.passTextBox.UseSystemPasswordChar = true;
+            this.passTextBox.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.passTextBox_MaskInputRejected);
+            this.passTextBox.Click += new System.EventHandler(this.maskedTextBox4_Click);
             // 
             // maskedTextBox3
             // 
             this.maskedTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.maskedTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.maskedTextBox3.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.maskedTextBox3.Location = new System.Drawing.Point(14, 197);
+            this.maskedTextBox3.Location = new System.Drawing.Point(15, 195);
             this.maskedTextBox3.Name = "maskedTextBox3";
             this.maskedTextBox3.Size = new System.Drawing.Size(243, 15);
             this.maskedTextBox3.TabIndex = 25;
             this.maskedTextBox3.Text = "Телефон";
+            this.maskedTextBox3.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox3_MaskInputRejected);
             this.maskedTextBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.maskedTextBox3_MouseClick);
             // 
             // maskedTextBox2
@@ -157,30 +150,31 @@
             this.maskedTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.maskedTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.maskedTextBox2.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.maskedTextBox2.Location = new System.Drawing.Point(16, 163);
+            this.maskedTextBox2.Location = new System.Drawing.Point(17, 161);
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(243, 15);
             this.maskedTextBox2.TabIndex = 24;
             this.maskedTextBox2.Text = "Email";
+            this.maskedTextBox2.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox2_MaskInputRejected);
             this.maskedTextBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.maskedTextBox2_MouseClick);
             // 
-            // maskedTextBox1
+            // loginTextBox
             // 
-            this.maskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.maskedTextBox1.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.maskedTextBox1.Location = new System.Drawing.Point(17, 123);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(243, 15);
-            this.maskedTextBox1.TabIndex = 23;
-            this.maskedTextBox1.Text = "Логин";
-            this.maskedTextBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.maskedTextBox1_MouseClick);
+            this.loginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.loginTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.loginTextBox.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.loginTextBox.Location = new System.Drawing.Point(18, 128);
+            this.loginTextBox.Name = "loginTextBox";
+            this.loginTextBox.Size = new System.Drawing.Size(243, 15);
+            this.loginTextBox.TabIndex = 23;
+            this.loginTextBox.Text = "Логин";
+            this.loginTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.maskedTextBox1_MouseClick);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Enabled = false;
-            this.label12.Location = new System.Drawing.Point(14, 169);
+            this.label12.Location = new System.Drawing.Point(15, 167);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(403, 13);
             this.label12.TabIndex = 19;
@@ -190,7 +184,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Enabled = false;
-            this.label8.Location = new System.Drawing.Point(14, 128);
+            this.label8.Location = new System.Drawing.Point(15, 133);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(403, 13);
             this.label8.TabIndex = 15;
@@ -200,7 +194,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Enabled = false;
-            this.label6.Location = new System.Drawing.Point(12, 203);
+            this.label6.Location = new System.Drawing.Point(13, 201);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(403, 13);
             this.label6.TabIndex = 13;
@@ -210,7 +204,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Enabled = false;
-            this.label4.Location = new System.Drawing.Point(12, 240);
+            this.label4.Location = new System.Drawing.Point(13, 238);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(403, 13);
             this.label4.TabIndex = 11;
@@ -221,7 +215,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label2.Location = new System.Drawing.Point(15, 94);
+            this.label2.Location = new System.Drawing.Point(15, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 16);
             this.label2.TabIndex = 2;
@@ -319,6 +313,17 @@
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.label3.Location = new System.Drawing.Point(17, 232);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 16);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Пароль";
+            // 
             // SignInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -343,7 +348,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -352,11 +356,12 @@
         private ns1.BunifuFlatButton bunifuFlatButton1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox3;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox loginTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.MaskedTextBox maskedTextBox5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        private System.Windows.Forms.MaskedTextBox passTextBox;
+        private System.Windows.Forms.Label label3;
 
     }
 }

@@ -15,6 +15,17 @@ namespace Сайтец
         public ProductUserControl()
         {
             InitializeComponent();
+            pictureBox1.Load("https://steammachine.ru/slider/2337648-220x126.jpg");
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuCards1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

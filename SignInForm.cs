@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Сайтец
 {
@@ -18,7 +19,24 @@ namespace Сайтец
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
-        {
+        {                
+            if (maskedTextBox5.Text == passTextBox.Text)
+            {
+                MySqlCommand q = new MySqlCommand(
+                    "INSERT INTO Pokupately (Login, Pass, Number, email) VALUES ('" + 
+                        loginTextBox.Text + "', '" + 
+                        passTextBox.Text + "', '" + 
+                        maskedTextBox3.Text + "', '" + 
+                        maskedTextBox2.Text + "')" , Form1.CONN);
+                MySqlDataReader r = q.ExecuteReader();
+                r.Close();
+                MessageBox.Show("Случилось");
+            }
+            else
+            {
+                MessageBox.Show("У вас, сударь, пароль аляповат-с");
+            }
+
             Close();
         }
 
@@ -35,9 +53,9 @@ Close();
         private void maskedTextBox1_MouseClick(object sender, MouseEventArgs e)
         {
 
-            if (maskedTextBox1.Text == "Логин")
+            if (loginTextBox.Text == "Логин")
             {
-                maskedTextBox1.Clear();
+                loginTextBox.Clear();
             }
         }
 
@@ -66,6 +84,31 @@ Close();
         private void maskedTextBox5_Click(object sender, EventArgs e)
         {
             label5.Visible = false;
+        }
+
+        private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+        
+        }
+
+        private void maskedTextBox5_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maskedTextBox3_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void passTextBox_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
 
     }

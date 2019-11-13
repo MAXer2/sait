@@ -28,80 +28,101 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TitleLabel = new System.Windows.Forms.Label();
-            this.PriceLabel = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductUserControl));
+            this.bunifuCards1 = new ns1.BunifuCards();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.bunifuCards1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // TitleLabel
+            // bunifuCards1
             // 
-            this.TitleLabel.AutoSize = true;
-            this.TitleLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TitleLabel.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TitleLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.TitleLabel.Location = new System.Drawing.Point(22, 53);
-            this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(162, 29);
-            this.TitleLabel.TabIndex = 0;
-            this.TitleLabel.Text = "НАЗВАНИЕ";
+            this.bunifuCards1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
+            this.bunifuCards1.BorderRadius = 5;
+            this.bunifuCards1.BottomSahddow = true;
+            this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(80)))), ((int)(((byte)(104)))));
+            this.bunifuCards1.Controls.Add(this.label3);
+            this.bunifuCards1.Controls.Add(this.label2);
+            this.bunifuCards1.Controls.Add(this.label1);
+            this.bunifuCards1.LeftSahddow = false;
+            this.bunifuCards1.Location = new System.Drawing.Point(-25, 112);
+            this.bunifuCards1.Name = "bunifuCards1";
+            this.bunifuCards1.RightSahddow = true;
+            this.bunifuCards1.ShadowDepth = 20;
+            this.bunifuCards1.Size = new System.Drawing.Size(260, 77);
+            this.bunifuCards1.TabIndex = 4;
+            this.bunifuCards1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards1_Paint);
             // 
-            // PriceLabel
+            // pictureBox1
             // 
-            this.PriceLabel.AutoSize = true;
-            this.PriceLabel.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PriceLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.PriceLabel.Location = new System.Drawing.Point(61, 82);
-            this.PriceLabel.Name = "PriceLabel";
-            this.PriceLabel.Size = new System.Drawing.Size(78, 25);
-            this.PriceLabel.TabIndex = 1;
-            this.PriceLabel.Text = "ЦЕНА";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, -8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(217, 123);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DimGray;
-            this.label1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(26, 3);
+            this.label1.Font = new System.Drawing.Font("T-FLEX Type T", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.Location = new System.Drawing.Point(176, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 23);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "ПОДРОБНЕЕ";
+            this.label1.Size = new System.Drawing.Size(68, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "400 Р";
             // 
-            // panel1
+            // label2
             // 
-            this.panel1.BackColor = System.Drawing.Color.DimGray;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-6, 125);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(247, 133);
-            this.panel1.TabIndex = 3;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("T-FLEX Type T", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.LightGray;
+            this.label2.Location = new System.Drawing.Point(31, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 25);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "PUBG";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("T-FLEX Type T", 12F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label3.Location = new System.Drawing.Point(121, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 19);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "1000 Р";
             // 
             // ProductUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.PriceLabel);
-            this.Controls.Add(this.TitleLabel);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.bunifuCards1);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "ProductUserControl";
-            this.Size = new System.Drawing.Size(187, 156);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Size = new System.Drawing.Size(216, 147);
+            this.bunifuCards1.ResumeLayout(false);
+            this.bunifuCards1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        public System.Windows.Forms.Label TitleLabel;
-        public System.Windows.Forms.Label PriceLabel;
-        public System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
+        private ns1.BunifuCards bunifuCards1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+
 
     }
 }
