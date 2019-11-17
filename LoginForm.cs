@@ -41,22 +41,10 @@ namespace Сайтец
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
-        {
-
-            List<string> res = new List<string>();
-            MySqlCommand q = new MySqlCommand("SELECT * FROM `Pokupately`" +
-                " WHERE Login = '" + loginTextBox.Text + "' && Pass = '" + passTextBox.Text + "'" , Form1.CONN);
-            MySqlDataReader r = q.ExecuteReader();
-
-            while (r.Read())
-            {
-                for (int inc = 0; inc < r.FieldCount; inc++)
-                {
-                    res.Add(r[inc].ToString());
-                }
-            }
-            r.Close();
-
+        {            
+            List<string> res = Form1.Select("SELECT * FROM `Pokupately`" +
+                " WHERE Login = '" + loginTextBox.Text + "' && Pass = '" + passTextBox.Text + "'");
+         
             if (res.Count > 0)
             {
                 MessageBox.Show("Успешно");
@@ -64,19 +52,8 @@ namespace Сайтец
             }
             else
             {
-                res = new List<string>();
-                q = new MySqlCommand("SELECT * FROM `Pokupately`" +
-                    " WHERE Login = '" + loginTextBox.Text + "'", Form1.CONN);
-                r = q.ExecuteReader();
-
-                while (r.Read())
-                {
-                    for (int inc = 0; inc < r.FieldCount; inc++)
-                    {
-                        res.Add(r[inc].ToString());
-                    }
-                }
-                r.Close();
+                res = Form1.Select("SELECT * FROM `Pokupately`" +
+                    " WHERE Login = '" + loginTextBox.Text + "'");
 
                 if (res.Count > 0)
                 {

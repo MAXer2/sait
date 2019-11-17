@@ -86,6 +86,21 @@
     <Compile Include="LoginControl.Designer.cs">
       <DependentUpon>LoginControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="tovar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tovar.Designer.cs">
+      <DependentUpon>tovar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="earn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="earn.Designer.cs">
+      <DependentUpon>earn.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="earn.resx">
+      <DependentUpon>earn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +125,9 @@
     </Compile>
     <EmbeddedResource Include="LoginControl.resx">
       <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tovar.resx">
+      <DependentUpon>tovar.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

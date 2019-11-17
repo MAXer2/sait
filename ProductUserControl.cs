@@ -7,20 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MySql.Data.MySqlClient;
 namespace Сайтец
 {
     public partial class ProductUserControl : UserControl
     {
-        public ProductUserControl()
+        string id;
+
+        public ProductUserControl(string _id)
         {
             InitializeComponent();
-            pictureBox1.Load("https://steammachine.ru/slider/2337648-220x126.jpg");
+            id = _id;
+            // pictureBox1.Load("https://steammachine.ru/slider/2337648-220x126.jpg");
+
+
+            List<string> res = Form1.Select("SELECT * FROM `Products`" +
+                " WHERE id = '" + id + "'");
+
+            label2.Text = res[0].ToString();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            tovar t1 = new tovar(id);
+            t1.ShowDialog();
         }
 
         private void bunifuCards1_Paint(object sender, PaintEventArgs e)

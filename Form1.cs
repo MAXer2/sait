@@ -45,15 +45,45 @@ namespace Сайтец
         }
 
         public static string CONNECTION_STRING =
-            "SslMode=none;" +
+            /*"SslMode=none;" +
             "Server=db4free.net;" +
             "database=ingenerka;" +
             "port=3306;" +
             "uid=ingenerka;" +
             "pwd=Beavis1989;" +
+            "old guids=true;";*/
+            "SslMode=none;" +
+            "Server=localhost;" +
+            "database=ingenerka;" +
+            "port=3306;" +
+            "uid=root;" +
             "old guids=true;";
 
         public static MySqlConnection CONN;
+
+        /// <summary>
+        /// Select-запрос
+        /// </summary>
+        /// <param name="sqlzapros"></param>
+        /// <returns></returns>
+        public static List<string> Select(string sqlzapros)
+        {
+            List<string> res = new List<string>();
+            MySqlCommand q = new MySqlCommand(sqlzapros, Form1.CONN);
+            MySqlDataReader r = q.ExecuteReader();
+
+            while (r.Read())
+            {
+                for (int inc = 0; inc < r.FieldCount; inc++)
+                {
+                    res.Add(r[inc].ToString());
+                }
+            }
+            r.Close();
+
+            return res;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             CONN = new MySqlConnection(CONNECTION_STRING);           
@@ -62,9 +92,13 @@ namespace Сайтец
                 CONN.Open();
             }
 
-            ProductUserControl product2 = new ProductUserControl();
+            ProductUserControl product2 = new ProductUserControl("1");
             product2.Location = new Point(0, 0);
             panel6.Controls.Add(product2);
+
+            ProductUserControl product = new ProductUserControl("2");
+            product.Location = new Point(0, 0);
+            panel3.Controls.Add(product);
             /*
             List<string> res = new List<string>();
             MySqlCommand q = new MySqlCommand("SELECT * FROM Products", CONN);
@@ -167,6 +201,12 @@ namespace Сайтец
         private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            earn e1 = new earn ();
+            e1.ShowDialog ();
         }
     }
 }

@@ -7,3 +7,21 @@ C:\Users\Student\Downloads\Eldorado-master\obj\Debug\Сайтец.Properties.Res
 C:\Users\Student\Downloads\Eldorado-master\obj\Debug\Сайтец.csproj.GenerateResource.Cache
 C:\Users\Student\Downloads\Eldorado-master\obj\Debug\Сайтец.exe
 C:\Users\Student\Downloads\Eldorado-master\obj\Debug\Сайтец.pdb
+C:\Users\Abra\1\sait-master (5)\sait-master\bin\Debug\Сайтец.exe.config
+C:\Users\Abra\1\sait-master (5)\sait-master\bin\Debug\Сайтец.exe
+C:\Users\Abra\1\sait-master (5)\sait-master\bin\Debug\Сайтец.pdb
+C:\Users\Abra\1\sait-master (5)\sait-master\bin\Debug\MySql.Data.dll
+C:\Users\Abra\1\sait-master (5)\sait-master\obj\Debug\Сайтец.csprojAssemblyReference.cache
+C:\Users\Abra\1\sait-master (5)\sait-master\obj\Debug\Сайтец.Form1.resources
+C:\Users\Abra\1\sait-master (5)\sait-master\obj\Debug\Сайтец.LoginForm.resources
+C:\Users\Abra\1\sait-master (5)\sait-master\obj\Debug\Сайтец.SignInForm.resources
+C:\Users\Abra\1\sait-master (5)\sait-master\obj\Debug\Сайтец.ProductUserControl.resources
+C:\Users\Abra\1\sait-master (5)\sait-master\obj\Debug\Сайтец.Properties.Resources.resources
+C:\Users\Abra\1\sait-master (5)\sait-master\obj\Debug\Сайтец.LoginUserControl.resources
+C:\Users\Abra\1\sait-master (5)\sait-master\obj\Debug\Сайтец.csproj.GenerateResource.cache
+C:\Users\Abra\1\sait-master (5)\sait-master\obj\Debug\Сайтец.csproj.CoreCompileInputs.cache
+C:\Users\Abra\1\sait-master (5)\sait-master\obj\Debug\Сайтец.csproj.CopyComplete
+C:\Users\Abra\1\sait-master (5)\sait-master\obj\Debug\Сайтец.exe
+C:\Users\Abra\1\sait-master (5)\sait-master\obj\Debug\Сайтец.pdb
+C:\Users\Abra\1\sait-master (5)\sait-master\obj\Debug\Сайтец.tovar.resources
+C:\Users\Abra\1\sait-master (5)\sait-master\obj\Debug\Сайтец.earn.resources
