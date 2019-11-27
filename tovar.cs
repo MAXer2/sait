@@ -12,9 +12,11 @@ namespace Сайтец
 {
     public partial class tovar : Form
     {
+        string ident;
         public tovar(string id)
         {
             InitializeComponent();
+            ident = id;
             List<string> infaOTovare = Form1.Select("SELECT Title, Price, Image FROM `Products`" +
            " WHERE id = '" + id + "'");
             label5.Text = infaOTovare[0].ToString();
@@ -47,6 +49,24 @@ namespace Сайтец
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void bunifuTileButton2_Click(object sender, EventArgs e)
+        {
+            Form1.KuplennyeTovary.Add(ident);
+
+
+            /*for (int i = 0; i < Form1.KuplennyeTovary.Count; i++)
+            {
+                MessageBox.Show(Form1.KuplennyeTovary[i]);
+            }*/
+
+            foreach(string tovar in Form1.KuplennyeTovary)
+            {
+                MessageBox.Show(tovar);
+            }
+
 
         }
     }

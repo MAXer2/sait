@@ -44,6 +44,8 @@ namespace Сайтец
 
         }
 
+        public static List<string> KuplennyeTovary;
+
         public static string CONNECTION_STRING =
             "SslMode=none;" +
             "Server=db4free.net;" +
@@ -86,6 +88,7 @@ namespace Сайтец
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            KuplennyeTovary = new List<string>();
             CONN = new MySqlConnection(CONNECTION_STRING);           
             while (CONN.State != ConnectionState.Open)
             { 
@@ -101,13 +104,17 @@ namespace Сайтец
                 ProductUserControl product = new ProductUserControl(products[i]);
                 product.Location = new Point(x, y);
                 product.Size = new Size(220, 150);
-                Controls.Add(product);
-                x = x + 250;
 
-                if (x > this.Width - 250)
+                //if (KuplennyeTovary.Contains(products[i]))
                 {
-                    y = y + 200;
-                    x = 50;
+                    Controls.Add(product);
+                    x = x + 250;
+
+                    if (x > this.Width - 250)
+                    {
+                        y = y + 200;
+                        x = 50;
+                    }
                 }
             }
         }
@@ -172,6 +179,12 @@ namespace Сайтец
         {
             earn e1 = new earn ();
             e1.ShowDialog ();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            korzina k1 = new korzina();
+            k1.ShowDialog();
         }
     }
 }
