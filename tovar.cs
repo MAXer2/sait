@@ -15,6 +15,10 @@ namespace Сайтец
         public tovar(string id)
         {
             InitializeComponent();
+            List<string> infaOTovare = Form1.Select("SELECT Title, Price, Image FROM `Products`" +
+           " WHERE id = '" + id + "'");
+            label5.Text = infaOTovare[0].ToString();
+            label1.Text = infaOTovare[1].ToString() + " Р";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -28,7 +32,22 @@ namespace Сайтец
 
         private void tovar_Load(object sender, EventArgs e)
         {
-            panel3.Location = new Point(Width / 10, Height / 10);
+            //panel3.Location = new Point(Width / 10, Height / 10);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -45,19 +45,19 @@ namespace Сайтец
         }
 
         public static string CONNECTION_STRING =
-            /*"SslMode=none;" +
+            "SslMode=none;" +
             "Server=db4free.net;" +
             "database=ingenerka;" +
             "port=3306;" +
             "uid=ingenerka;" +
             "pwd=Beavis1989;" +
-            "old guids=true;";*/
-            "SslMode=none;" +
+            "old guids=true;";
+        /*"SslMode=none;" +
             "Server=localhost;" +
             "database=ingenerka;" +
             "port=3306;" +
             "uid=root;" +
-            "old guids=true;";
+            "old guids=true;";*/
 
         public static MySqlConnection CONN;
 
@@ -92,59 +92,24 @@ namespace Сайтец
                 CONN.Open();
             }
 
-            ProductUserControl product2 = new ProductUserControl("1");
-            product2.Location = new Point(0, 0);
-            panel6.Controls.Add(product2);
+            List<string> products = Select("SELECT id FROM Products");
 
-            ProductUserControl product = new ProductUserControl("2");
-            product.Location = new Point(0, 0);
-            panel3.Controls.Add(product);
-            /*
-            List<string> res = new List<string>();
-            MySqlCommand q = new MySqlCommand("SELECT * FROM Products", CONN);
-            MySqlDataReader r = q.ExecuteReader();
-
-            while (r.Read())
+            int x = 50;
+            int y = 290;
+            for (int i = 0; i < products.Count; i = i + 1 )
             {
-                for (int inc = 0; inc < r.FieldCount; inc++)
+                ProductUserControl product = new ProductUserControl(products[i]);
+                product.Location = new Point(x, y);
+                product.Size = new Size(220, 150);
+                Controls.Add(product);
+                x = x + 250;
+
+                if (x > this.Width - 250)
                 {
-                    res.Add(r[inc].ToString());
+                    y = y + 200;
+                    x = 50;
                 }
             }
-            r.Close();
-
-
-
-            ProductUserControl product1 = new ProductUserControl();
-            product1.Location = new Point(21,210);
-            product1.TitleLabel.Text = res[0];
-            product1.PriceLabel.Text = res[1];
-            Controls.Add(product1);
-
-            ProductUserControl product2 = new ProductUserControl();
-            product2.Location = new Point(240, 210);
-            product2.TitleLabel.Text = res[4+0];
-            product2.PriceLabel.Text = res[4 + 1];
-            Controls.Add(product2);
-
-            /*Form1 f = new Form1();
-            f.ShowDialog();*/
-
-
-            /*res = new List<string>();
-            q = new MySqlCommand("SELECT * FROM Pokupately", CONN);
-            r = q.ExecuteReader();
-
-            while (r.Read())
-            {
-                for (int inc = 0; inc < r.FieldCount; inc++)
-                {
-                    res.Add(r[inc].ToString());
-                }
-            }
-            r.Close();*/
-
-
         }
 
         private void bannerPictureBox_Click(object sender, EventArgs e)

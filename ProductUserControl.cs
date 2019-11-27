@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+
 namespace Сайтец
 {
     public partial class ProductUserControl : UserControl
@@ -21,10 +21,12 @@ namespace Сайтец
             // pictureBox1.Load("https://steammachine.ru/slider/2337648-220x126.jpg");
 
 
-            List<string> res = Form1.Select("SELECT * FROM `Products`" +
+            List<string> infaOTovare = Form1.Select("SELECT Title, Price, Image FROM `Products`" +
                 " WHERE id = '" + id + "'");
+            label2.Text = infaOTovare[0].ToString();
+            label1.Text = infaOTovare[1].ToString() + " Р";
 
-            label2.Text = res[0].ToString();
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -34,6 +36,11 @@ namespace Сайтец
         }
 
         private void bunifuCards1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
