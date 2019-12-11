@@ -56,17 +56,23 @@ namespace Сайтец
         {
             Form1.KuplennyeTovary.Add(ident);
 
+            MessageBox.Show("Добавлено");
 
             /*for (int i = 0; i < Form1.KuplennyeTovary.Count; i++)
             {
                 MessageBox.Show(Form1.KuplennyeTovary[i]);
             }*/
 
-            foreach(string tovar in Form1.KuplennyeTovary)
+            /*foreach(string tovar in Form1.KuplennyeTovary)
             {
                 MessageBox.Show(tovar);
-            }
+            }*/
 
+
+        }
+
+        private void Panel2_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

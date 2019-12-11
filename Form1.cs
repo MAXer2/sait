@@ -88,6 +88,7 @@ namespace Сайтец
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             KuplennyeTovary = new List<string>();
             CONN = new MySqlConnection(CONNECTION_STRING);           
             while (CONN.State != ConnectionState.Open)
@@ -96,9 +97,10 @@ namespace Сайтец
             }
 
             List<string> products = Select("SELECT id FROM Products");
+           
 
             int x = 50;
-            int y = 290;
+            int y = 20;
             for (int i = 0; i < products.Count; i = i + 1 )
             {
                 ProductUserControl product = new ProductUserControl(products[i]);
@@ -107,7 +109,7 @@ namespace Сайтец
 
                 //if (KuplennyeTovary.Contains(products[i]))
                 {
-                    Controls.Add(product);
+                    panel3.Controls.Add(product);
                     x = x + 250;
 
                     if (x > this.Width - 250)
@@ -116,7 +118,12 @@ namespace Сайтец
                         x = 50;
                     }
                 }
-            }
+                
+                }
+            panel3.Visible = true;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            label1.ForeColor = Color.FromArgb(93, 110, 134);
         }
 
         private void bannerPictureBox_Click(object sender, EventArgs e)
@@ -136,7 +143,13 @@ namespace Сайтец
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+            panel3.Visible= true;
+            panel4.Visible = false;
+            label6.ForeColor = Color.FromArgb(73, 90, 114);
+            label4.ForeColor = Color.FromArgb(73, 90, 114);
+            label2.ForeColor = Color.FromArgb(73, 90, 114);
+            label3.ForeColor = Color.FromArgb(73, 90, 114);
+            label1.ForeColor = Color.FromArgb(93, 110, 134);
         }
 
         private void bunifuTextbox1_OnTextChange(object sender, EventArgs e)
@@ -185,6 +198,50 @@ namespace Сайтец
         {
             korzina k1 = new korzina();
             k1.ShowDialog();
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+            label6.ForeColor = Color.FromArgb(73, 90, 114);
+            label4.ForeColor = Color.FromArgb(73, 90, 114);
+            label3.ForeColor = Color.FromArgb(73, 90, 114);
+            label1.ForeColor = Color.FromArgb(73, 90, 114);
+            label2.ForeColor = Color.FromArgb(93, 110, 134);
+            panel5.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible =  true;
+        }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+            UserControl2 loading = new UserControl2 ();
+            loading.Location = new Point(233, 33);
+            loading.Size = new Size(152, 21);
+            Controls.Add(loading);
+           
+            label6.ForeColor = Color.FromArgb(73, 90, 114);
+            label4.ForeColor = Color.FromArgb(73, 90, 114);
+            label2.ForeColor = Color.FromArgb(73, 90, 114);
+            label1.ForeColor = Color.FromArgb(73, 90, 114);
+            label3.ForeColor = Color.FromArgb(93, 110, 134);
+            panel5.Visible = true;
+            panel4.Visible =false;
+            panel3.Visible = false;
+        }
+
+        private void RichTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
