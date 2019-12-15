@@ -46,20 +46,12 @@ namespace Сайтец
 
         public static List<string> KuplennyeTovary;
 
-        public static string CONNECTION_STRING =
-            "SslMode=none;" +
-            "Server=db4free.net;" +
-            "database=ingenerka;" +
-            "port=3306;" +
-            "uid=ingenerka;" +
-            "pwd=Beavis1989;" +
-            "old guids=true;";
-        /*"SslMode=none;" +
+        public static string CONNECTION_STRING ="SslMode=none;" +
             "Server=localhost;" +
             "database=ingenerka;" +
             "port=3306;" +
             "uid=root;" +
-            "old guids=true;";*/
+            "old guids=true;";
 
         public static MySqlConnection CONN;
 
@@ -242,6 +234,10 @@ namespace Сайтец
         private void Panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void label5_Click_1(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -12,6 +12,7 @@ namespace Сайтец
 {
     public partial class KorzinaControl : UserControl
     {
+        string PriceTovara;
         public KorzinaControl(string id)
         {
             InitializeComponent();
@@ -21,6 +22,8 @@ namespace Сайтец
 
             TovarName.Text = infaOTovare[0].ToString();
 
+            PriceLabel.Text = infaOTovare[1].ToString();
+            PriceTovara = infaOTovare[1].ToString();
             //1
         }
 
@@ -32,6 +35,29 @@ namespace Сайтец
         private void TovarName_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            int shtuk = Convert.ToInt32(AmountLabel.Text.Replace("шт", ""));
+            AmountLabel.Text = (shtuk + 1).ToString() + " шт";
+            shtuk = shtuk + 1;
+            PriceLabel.Text  = ( Convert.ToInt32(PriceTovara) * shtuk).ToString();
+            ((korzina)Parent.Parent).SummaLabel.Text = 
+                (((korzina)Parent.Parent).summa + Convert.ToInt32(PriceTovara)).ToString() + " р";
+        }
+
+        private void KorzinaControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+            int shtuk = Convert.ToInt32(AmountLabel.Text.Replace("шт", ""));
+            AmountLabel.Text = (shtuk - 1).ToString() + " шт";
+            shtuk = shtuk - 1;
+            PriceLabel.Text = (Convert.ToInt32(PriceTovara) / shtuk).ToString();
         }
     }
 }

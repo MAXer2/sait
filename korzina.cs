@@ -18,22 +18,24 @@ namespace Сайтец
             InitializeComponent();
         }
 
+        public int summa = 0;
+
         private void korzina_Load(object sender, EventArgs e)
         {
-
-            InitializeComponent();
-
-            int x = 19;
-            int y = 16;
+            int x = 10;
+            int y = 10;
             foreach (string id in Form1.KuplennyeTovary)
             {
                 KorzinaControl Korzina = new KorzinaControl(id);
                 Korzina.Location = new Point(x, y);
                 Korzina.Size = new Size(680, 42);
+                summa = summa + Convert.ToInt32(Korzina.PriceLabel.Text.Replace("р", ""));
 
                 panel3.Controls.Add(Korzina);
                 y = y + 50;
             }
+
+            SummaLabel.Text = summa.ToString() + " р";
         }
 
         private void bunifuTileButton1_Click(object sender, EventArgs e)
@@ -44,6 +46,11 @@ namespace Сайтец
         private void Button2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

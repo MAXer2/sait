@@ -19,7 +19,7 @@ namespace Сайтец
             ident = id;
             List<string> infaOTovare = Form1.Select("SELECT Title, Price, Image FROM `Products`" +
            " WHERE id = '" + id + "'");
-            label5.Text = infaOTovare[0].ToString();
+            labelTovar.Text = infaOTovare[0].ToString();
             label1.Text = infaOTovare[1].ToString() + " Р";
         }
 
@@ -67,8 +67,7 @@ namespace Сайтец
             {
                 MessageBox.Show(tovar);
             }*/
-
-
+            
         }
 
         private void Panel2_Paint(object sender, PaintEventArgs e)
