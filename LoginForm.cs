@@ -21,7 +21,6 @@ namespace Сайтец
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
             Close();
-
         }
 
         private void maskedTextBox1_MouseClick(object sender, MouseEventArgs e)
@@ -35,9 +34,7 @@ namespace Сайтец
 
         private void maskedTextBox2_MouseClick(object sender, MouseEventArgs e)
         {
-
             label4.Visible = false;
-
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
@@ -48,6 +45,9 @@ namespace Сайтец
             if (res.Count > 0)
             {
                 MessageBox.Show("Успешно");
+                Form1.successLogin = true;
+                Form1.money.Visible = true;
+                Form1.login.Visible = false;
                 Close();
             }
             else
@@ -63,7 +63,12 @@ namespace Сайтец
                 {
                     MessageBox.Show("Нет вас");
                 }
+
+                Form1.money.Visible = false;
+                Form1.login.Visible = true;
+
             }
+           
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -72,6 +77,16 @@ namespace Сайтец
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loginTextBox_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }

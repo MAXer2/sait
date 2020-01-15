@@ -124,29 +124,6 @@
     <value>219, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bunifuFlatButton3.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAK1JREFUSEvt
-        lUsOgzAMRHMJqnIjrlKOWxbs6UHccTwbZD7BELHhSV5kxvZICEh6OISIdKgfKsqE6rjOw4azTFznYYPw
-        eBiOr8/TvycA8gf14nGRPAx49NB3DZB6c2RArYZYSyygQX2zKTKiWlozzA4EKJB3Q8wqCCjEhZh8bcCb
-        oxmTr3tEs+WKWYEASLvLFbNjAXVfUwVyvQ+tFI7fG1D9d60XzpmQ7QvnwZPSH3MTwH9wMnw8AAAAAElF
-        TkSuQmCC
-</value>
-  </data>
-  <data name="bunifuFlatButton2.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAf5JREFUaEPt
-        mE1KHFEURtu/NIqDDAJZTlAEBUFRVFxBdiCCqDhSZy5CHYkbcaYJSQzmRzdgYzsU23P7fYITqaru63tP
-        qAMfiP3ud0+rpVU2amreCZ1OZ4QskSPyk9yTtj62z9lrIzqeJwjOk9+kCDszr7F8QGqQ7JlhBR7JLhlU
-        TXqQqfomXrKrmrQgYj9O9tXtFZudU10aELALu8w1UcQf8kG18WG5/QbyYkm18WH5cXBw4VC18WH5ZXBw
-        4Zdq48Ny+0PnRVu18ZGAG6qNj/a7odr4aL8bqo2P9ruh2vhovxuqjY/2u6Ha+LC7FRRcaKk2Piy/CA4u
-        nKs2Piy3Jz4vkt6izAYHF2ZUGx+WD5N/XY3+uCLDqk0DApOk3werKdWlBZGDrlJv7KkmDxDaCV6V2Nd4
-        XkiuNBrLD/mVRmP5Ib/SaCw/5FcajeUFXp+DXiU+aTw9yAyQBfLXzCryjUyoKg0IDJFV4nHjeEZWyJDq
-        3x6WjZOvxPNfQc/Y7c46+ah1/lA+RraJ5zPIa9ySTTKq9T5QOEFuSGz+ky/S6A+K7Fv9YK2JsN1r0ukN
-        Cra6VXmwIa1qMDhF+rk998ZcpqVXDgaa5NqmM8OumaY0i+HwcncsTxalWQyHT8NMlpxIsxgO/wgzWfJd
-        msVw+C7MZMmdNIvRQLZIs6ampjSNxhNejgUFY5M9agAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="pictureBox3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAndJREFUaEPt
@@ -192,7 +169,7 @@
   <data name="bunifuTextbox1.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMJSURBVHhe7ZBbbtxADAR9olwnh8qhE8AoAoRSsw97ViLX
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMJSURBVHhe7ZBbbtxADAR9olwnh8qhE8AoAoRSsw97ViLX
         LKC+1Bw1+TEMwzAMwzAMwzAMT/Prz++/35FnhmewQ+6Q54cVdrRXyO+GwI50hvz+52JHuULq/CzsEFdK
         rffHlq8kNd8TW/hReeJh7I1H5Yn3wha9J6Pfxt6+J6PvgS14S8a2Y/+6JWO9scVWMvJy7N8rGemLLWUS
         Pw3rYBLviS1kEj8d62IS74UtYhK/DOtkEu+DLXGU6OVYt6NEe2ALHCVaBut4lGh9rHyWWDmsa5ZYbax4
@@ -749,19 +726,6 @@
         /R7X7B79iqVKgQIdgzCDn149olDqTS7nmj2v2j3jKpUqBAgQdspVnRx/JpdzzR7X7BGVSoEqBKgh7e0N
         /wCTS7nhx8fb+0Q0RUqVAgQIIYeznGh3PF8B7VDcI1yjOnsxMTEIIIIIPXnmP0dzxjrL5j01PITrft/I
         Dvw8piGmCME8rnV/U6v6nV/U6v6nV/U636nU/TOMM6j0YvUPjhHSlr/9J//Z
-</value>
-  </data>
-  <data name="richTextBox1.Text" xml:space="preserve">
-    <value>Мы - это мы, я думаю этим все ясно, а дальше я пожалуй напишу что-то чтобы занять пространство на данной панеле, лучше вам это не читать, да и вообще зачем вы сюда кликнули, лучше идите и покупайте товары, а не читайте описание магазина. Да да, магазина ключей стим, который пока что не до конца работает, но он есть и это главное. 
-У нас вы можете приобрести товары, но пока вы не можете это сделать так как не работает оплату, надеюсь когда нибудь мы ее сделаем
-Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ 
-Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ 
-Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ 
-Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ 
-Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ 
-Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ Я @ ТЫ @ 
-
-
 </value>
   </data>
   <data name="button3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

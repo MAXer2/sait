@@ -13,12 +13,24 @@ namespace Сайтец
 {
     public partial class Form1 : Form
     {
+        public static bool successLogin = false;
+
+        public static moneyControl money = new moneyControl();
+        public static LoginControl1 login = new LoginControl1();
+
+
         List<Image> banners = new List<Image>();
         int bannerIndex = 0;
         public Form1()
         {
             InitializeComponent();
-            
+
+            login.Location = new Point(422,11);
+            panel1.Controls.Add(login);
+
+            money.Location = new Point(500, 14);
+            panel1.Controls.Add(money);
+           
             banners.Add(Properties.Resources.banner1);
             banners.Add(Properties.Resources.banner2);
             banners.Add(Properties.Resources.banner3);
@@ -45,13 +57,21 @@ namespace Сайтец
         }
 
         public static List<string> KuplennyeTovary;
-
-        public static string CONNECTION_STRING ="SslMode=none;" +
+        
+        public static string CONNECTION_STRING =
+            "SslMode=none;" +
+            "Server=db4free.net;" +
+            "database=ingenerka;" +
+            "port=3306;" +
+            "uid=ingenerka;" +
+            "pwd=Beavis1989;" +
+            "old guids=true;";
+        /*"SslMode=none;" +
             "Server=localhost;" +
             "database=ingenerka;" +
             "port=3306;" +
             "uid=root;" +
-            "old guids=true;";
+            "old guids=true;";*/
 
         public static MySqlConnection CONN;
 
@@ -238,6 +258,11 @@ namespace Сайтец
 
         private void label5_Click_1(object sender, EventArgs e)
         {
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

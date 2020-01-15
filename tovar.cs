@@ -30,6 +30,9 @@ namespace Сайтец
 
         private void bunifuTileButton1_Click(object sender, EventArgs e)
         {
+          WebForm w = new WebForm();
+          w.ShowDialog();
+
         }
 
         private void tovar_Load(object sender, EventArgs e)

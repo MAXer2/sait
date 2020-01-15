@@ -23,8 +23,9 @@ namespace Сайтец
             if (maskedTextBox5.Text == passTextBox.Text)
             {
                 MySqlCommand q = new MySqlCommand(
-                    "INSERT INTO Pokupately (Login, Pass, Number, email) VALUES ('" + 
-                        loginTextBox.Text + "', '" + 
+                    "INSERT INTO Pokupately (Login, Name, Pass, Number, email) VALUES ('" + 
+                        loginTextBox.Text + "', '" +
+                        maskedTextBox1.Text + "', '" + 
                         passTextBox.Text + "', '" + 
                         maskedTextBox3.Text + "', '" + 
                         maskedTextBox2.Text + "')" , Form1.CONN);
@@ -107,6 +108,11 @@ Close();
         }
 
         private void passTextBox_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
