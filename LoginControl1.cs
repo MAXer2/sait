@@ -25,6 +25,7 @@ namespace Сайтец
             if (Form1.successLogin)
             {
                 Visible = false;
+                Form1.money.Visible = true;
             }
         }
 

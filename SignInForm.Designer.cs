@@ -30,6 +30,8 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -47,8 +49,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton2 = new ns1.BunifuFlatButton();
             this.bunifuFlatButton1 = new ns1.BunifuFlatButton();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -89,12 +89,33 @@
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.maskedTextBox1.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.maskedTextBox1.Location = new System.Drawing.Point(20, 87);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(243, 15);
+            this.maskedTextBox1.TabIndex = 31;
+            this.maskedTextBox1.Text = "Имя , фамилия ";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Enabled = false;
+            this.label9.Location = new System.Drawing.Point(17, 92);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(403, 13);
+            this.label9.TabIndex = 30;
+            this.label9.Text = "__________________________________________________________________";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label5.Location = new System.Drawing.Point(14, 272);
+            this.label5.Location = new System.Drawing.Point(14, 254);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(112, 16);
             this.label5.TabIndex = 28;
@@ -106,7 +127,7 @@
             this.maskedTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.maskedTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.maskedTextBox5.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.maskedTextBox5.Location = new System.Drawing.Point(20, 277);
+            this.maskedTextBox5.Location = new System.Drawing.Point(20, 259);
             this.maskedTextBox5.Name = "maskedTextBox5";
             this.maskedTextBox5.Size = new System.Drawing.Size(243, 15);
             this.maskedTextBox5.TabIndex = 29;
@@ -118,7 +139,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Enabled = false;
-            this.label7.Location = new System.Drawing.Point(13, 283);
+            this.label7.Location = new System.Drawing.Point(13, 265);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(403, 13);
             this.label7.TabIndex = 27;
@@ -129,7 +150,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label3.Location = new System.Drawing.Point(15, 236);
+            this.label3.Location = new System.Drawing.Point(16, 221);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 16);
             this.label3.TabIndex = 12;
@@ -140,7 +161,7 @@
             this.passTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.passTextBox.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.passTextBox.Location = new System.Drawing.Point(18, 239);
+            this.passTextBox.Location = new System.Drawing.Point(19, 224);
             this.passTextBox.Name = "passTextBox";
             this.passTextBox.Size = new System.Drawing.Size(243, 15);
             this.passTextBox.TabIndex = 26;
@@ -153,7 +174,7 @@
             this.maskedTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.maskedTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.maskedTextBox3.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.maskedTextBox3.Location = new System.Drawing.Point(15, 201);
+            this.maskedTextBox3.Location = new System.Drawing.Point(16, 186);
             this.maskedTextBox3.Name = "maskedTextBox3";
             this.maskedTextBox3.Size = new System.Drawing.Size(243, 15);
             this.maskedTextBox3.TabIndex = 25;
@@ -166,7 +187,7 @@
             this.maskedTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.maskedTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.maskedTextBox2.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.maskedTextBox2.Location = new System.Drawing.Point(17, 167);
+            this.maskedTextBox2.Location = new System.Drawing.Point(18, 152);
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(243, 15);
             this.maskedTextBox2.TabIndex = 24;
@@ -179,7 +200,7 @@
             this.loginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.loginTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.loginTextBox.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.loginTextBox.Location = new System.Drawing.Point(18, 134);
+            this.loginTextBox.Location = new System.Drawing.Point(19, 119);
             this.loginTextBox.Name = "loginTextBox";
             this.loginTextBox.Size = new System.Drawing.Size(243, 15);
             this.loginTextBox.TabIndex = 23;
@@ -190,7 +211,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Enabled = false;
-            this.label12.Location = new System.Drawing.Point(15, 173);
+            this.label12.Location = new System.Drawing.Point(16, 158);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(403, 13);
             this.label12.TabIndex = 19;
@@ -200,7 +221,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Enabled = false;
-            this.label8.Location = new System.Drawing.Point(15, 139);
+            this.label8.Location = new System.Drawing.Point(16, 124);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(403, 13);
             this.label8.TabIndex = 15;
@@ -210,7 +231,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Enabled = false;
-            this.label6.Location = new System.Drawing.Point(13, 207);
+            this.label6.Location = new System.Drawing.Point(14, 192);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(403, 13);
             this.label6.TabIndex = 13;
@@ -220,7 +241,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Enabled = false;
-            this.label4.Location = new System.Drawing.Point(13, 244);
+            this.label4.Location = new System.Drawing.Point(14, 229);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(403, 13);
             this.label4.TabIndex = 11;
@@ -231,7 +252,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label2.Location = new System.Drawing.Point(15, 78);
+            this.label2.Location = new System.Drawing.Point(15, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 16);
             this.label2.TabIndex = 2;
@@ -281,7 +302,7 @@
             this.bunifuFlatButton2.IconZoom = 90D;
             this.bunifuFlatButton2.IsTab = false;
             this.bunifuFlatButton2.Location = new System.Drawing.Point(20, 14);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(83)))), ((int)(((byte)(111)))));
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(72)))), ((int)(((byte)(92)))));
@@ -317,7 +338,7 @@
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
             this.bunifuFlatButton1.Location = new System.Drawing.Point(237, 14);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(173)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(138)))), ((int)(((byte)(134)))));
@@ -330,27 +351,6 @@
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.maskedTextBox1.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.maskedTextBox1.Location = new System.Drawing.Point(19, 102);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(243, 15);
-            this.maskedTextBox1.TabIndex = 31;
-            this.maskedTextBox1.Text = "Имя , фамилия ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Enabled = false;
-            this.label9.Location = new System.Drawing.Point(16, 107);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(403, 13);
-            this.label9.TabIndex = 30;
-            this.label9.Text = "__________________________________________________________________";
             // 
             // SignInForm
             // 
@@ -392,6 +392,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Label label9;
-
     }
 }

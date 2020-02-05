@@ -15,6 +15,7 @@ namespace Сайтец
     {
         public static bool successLogin = false;
 
+        public static int admin = 0;
         public static moneyControl money = new moneyControl();
         public static LoginControl1 login = new LoginControl1();
 
@@ -27,13 +28,14 @@ namespace Сайтец
 
             login.Location = new Point(422,11);
             panel1.Controls.Add(login);
-
-            money.Location = new Point(500, 14);
+            money.Visible = false;
+           money.Location = new Point(500, 14);
             panel1.Controls.Add(money);
-           
+
             banners.Add(Properties.Resources.banner1);
             banners.Add(Properties.Resources.banner2);
             banners.Add(Properties.Resources.banner3);
+       
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -43,6 +45,8 @@ namespace Сайтец
             {
                 bannerIndex = 0;
             }
+
+            AdminButton.Visible = (admin == 1);
                 
         }
 
@@ -261,6 +265,11 @@ namespace Сайтец
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void AdminButton_Click(object sender, EventArgs e)
         {
 
         }

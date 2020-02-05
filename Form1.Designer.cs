@@ -33,6 +33,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.AdminButton = new ns1.BunifuFlatButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -80,6 +81,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Controls.Add(this.AdminButton);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox3);
@@ -89,6 +91,42 @@
             this.panel1.Size = new System.Drawing.Size(835, 64);
             this.panel1.TabIndex = 12;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // AdminButton
+            // 
+            this.AdminButton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
+            this.AdminButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(80)))), ((int)(((byte)(104)))));
+            this.AdminButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AdminButton.BorderRadius = 0;
+            this.AdminButton.ButtonText = "ВОЙТИ В АДМИНКУ";
+            this.AdminButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AdminButton.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
+            this.AdminButton.Iconcolor = System.Drawing.Color.Transparent;
+            this.AdminButton.Iconimage = null;
+            this.AdminButton.Iconimage_right = null;
+            this.AdminButton.Iconimage_right_Selected = null;
+            this.AdminButton.Iconimage_Selected = null;
+            this.AdminButton.IconMarginLeft = 0;
+            this.AdminButton.IconMarginRight = 0;
+            this.AdminButton.IconRightVisible = true;
+            this.AdminButton.IconRightZoom = 0D;
+            this.AdminButton.IconVisible = true;
+            this.AdminButton.IconZoom = 90D;
+            this.AdminButton.IsTab = false;
+            this.AdminButton.Location = new System.Drawing.Point(516, 14);
+            this.AdminButton.Name = "AdminButton";
+            this.AdminButton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(80)))), ((int)(((byte)(104)))));
+            this.AdminButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
+            this.AdminButton.OnHoverTextColor = System.Drawing.Color.White;
+            this.AdminButton.selected = false;
+            this.AdminButton.Size = new System.Drawing.Size(160, 46);
+            this.AdminButton.TabIndex = 20;
+            this.AdminButton.Text = "ВОЙТИ В АДМИНКУ";
+            this.AdminButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.AdminButton.Textcolor = System.Drawing.Color.White;
+            this.AdminButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminButton.Visible = false;
+            this.AdminButton.Click += new System.EventHandler(this.AdminButton_Click);
             // 
             // label7
             // 
@@ -428,6 +466,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         public System.Windows.Forms.Label label5;
+        public ns1.BunifuFlatButton AdminButton;
     }
 }
 

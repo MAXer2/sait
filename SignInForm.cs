@@ -27,7 +27,7 @@ namespace Сайтец
                         loginTextBox.Text + "', '" +
                         maskedTextBox1.Text + "', '" + 
                         passTextBox.Text + "', '" + 
-                        maskedTextBox3.Text + "', '" + 
+                        maskedTextBox3.Text + "', '" +
                         maskedTextBox2.Text + "')" , Form1.CONN);
                 MySqlDataReader r = q.ExecuteReader();
                 r.Close();

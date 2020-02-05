@@ -54,6 +54,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ButtonDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ButtonDesign.Designer.cs">
+      <DependentUpon>ButtonDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesignMenu.Designer.cs">
+      <DependentUpon>DesignMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginControl.Designer.cs">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="moneyControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -83,6 +101,12 @@
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecursiaCalc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecursiaCalc.Designer.cs">
+      <DependentUpon>RecursiaCalc.cs</DependentUpon>
     </Compile>
     <Compile Include="SignInForm.cs">
       <SubType>Form</SubType>
@@ -116,18 +140,40 @@
     <Compile Include="earn.Designer.cs">
       <DependentUpon>earn.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl2.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControl2.Designer.cs">
       <DependentUpon>UserControl2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vars.cs" />
     <Compile Include="WebForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WebForm.Designer.cs">
       <DependentUpon>WebForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="YAXZCHTOETO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YAXZCHTOETO.Designer.cs">
+      <DependentUpon>YAXZCHTOETO.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ButtonDesign.resx">
+      <DependentUpon>ButtonDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesignMenu.resx">
+      <DependentUpon>DesignMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginControl.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="moneyControl.resx">
       <DependentUpon>moneyControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecursiaCalc.resx">
+      <DependentUpon>RecursiaCalc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignInForm.resx">
       <DependentUpon>SignInForm.cs</DependentUpon>
@@ -168,11 +217,17 @@
     <EmbeddedResource Include="tovar.resx">
       <DependentUpon>tovar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControl2.resx">
       <DependentUpon>UserControl2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WebForm.resx">
       <DependentUpon>WebForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YAXZCHTOETO.resx">
+      <DependentUpon>YAXZCHTOETO.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

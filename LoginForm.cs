@@ -39,7 +39,7 @@ namespace Сайтец
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {            
-            List<string> res = Form1.Select("SELECT * FROM `Pokupately`" +
+            List<string> res = Form1.Select("SELECT status FROM `Pokupately`" +
                 " WHERE Login = '" + loginTextBox.Text + "' && Pass = '" + passTextBox.Text + "'");
          
             if (res.Count > 0)
@@ -48,11 +48,15 @@ namespace Сайтец
                 Form1.successLogin = true;
                 Form1.money.Visible = true;
                 Form1.login.Visible = false;
+                if (res[0].ToString() == "admin")
+                {
+                    Form1.admin = 1;
+                }
                 Close();
             }
             else
             {
-                res = Form1.Select("SELECT * FROM `Pokupately`" +
+                res = Form1.Select("SELECT status FROM `Pokupately`" +
                     " WHERE Login = '" + loginTextBox.Text + "'");
 
                 if (res.Count > 0)
@@ -66,7 +70,7 @@ namespace Сайтец
 
                 Form1.money.Visible = false;
                 Form1.login.Visible = true;
-
+              
             }
            
         }
