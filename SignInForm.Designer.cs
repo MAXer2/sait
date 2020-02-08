@@ -150,7 +150,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label3.Location = new System.Drawing.Point(16, 221);
+            this.label3.Location = new System.Drawing.Point(15, 221);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 16);
             this.label3.TabIndex = 12;
@@ -161,7 +161,7 @@
             this.passTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.passTextBox.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.passTextBox.Location = new System.Drawing.Point(19, 224);
+            this.passTextBox.Location = new System.Drawing.Point(18, 224);
             this.passTextBox.Name = "passTextBox";
             this.passTextBox.Size = new System.Drawing.Size(243, 15);
             this.passTextBox.TabIndex = 26;

@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace Сайтец
 {
     partial class ButtonDesign
     {
@@ -963,6 +963,7 @@
             this.Name = "ButtonDesign";
             this.Text = "ButtonDesign";
             this.Load += new System.EventHandler(this.ButtonDesign_Load);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ButtonDesign_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabControl1.ResumeLayout(false);

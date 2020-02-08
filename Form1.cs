@@ -80,6 +80,16 @@ namespace Сайтец
         public static MySqlConnection CONN;
 
         /// <summary>
+        /// Update-запрос
+        /// </summary>
+        public static void Update(string zapros)
+        {
+            MySqlCommand q = new MySqlCommand(zapros, CONN);
+            MySqlDataReader r = q.ExecuteReader();
+            r.Close();
+        }
+
+        /// <summary>
         /// Select-запрос
         /// </summary>
         /// <param name="sqlzapros"></param>
@@ -102,19 +112,31 @@ namespace Сайтец
             return res;
         }
 
+        void connect()
+        {
+            while (CONN.State != ConnectionState.Open)
+            {
+                try
+                {
+                    CONN.Open();
+                }
+                catch (Exception)
+                {
+                    connect();
+                }
+            }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
             KuplennyeTovary = new List<string>();
-            CONN = new MySqlConnection(CONNECTION_STRING);           
-            while (CONN.State != ConnectionState.Open)
-            { 
-                CONN.Open();
-            }
+            CONN = new MySqlConnection(CONNECTION_STRING);
+            connect();
 
             List<string> products = Select("SELECT id FROM Products");
-           
 
+           //// Vars.ColorAllButtons(this);
             int x = 50;
             int y = 20;
             for (int i = 0; i < products.Count; i = i + 1 )
@@ -154,6 +176,20 @@ namespace Сайтец
 
         private void label5_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private Point MouseHook;
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+
+            Cursor = Cursors.Default;
+            if (e.Button != MouseButtons.Left) MouseHook = e.Location;
+            else
+            {
+                Location = new Point((Size)Location - (Size)MouseHook + (Size)e.Location);
+                Cursor = Cursors.Hand;
+            }
 
         }
 
@@ -271,6 +307,8 @@ namespace Сайтец
 
         private void AdminButton_Click(object sender, EventArgs e)
         {
+             ButtonDesign D = new ButtonDesign();
+            D.Show();
 
         }
     }

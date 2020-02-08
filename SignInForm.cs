@@ -32,6 +32,7 @@ namespace Сайтец
                 MySqlDataReader r = q.ExecuteReader();
                 r.Close();
                 MessageBox.Show("Случилось");
+               // Email.SendMail("smtp.gmail.com","nonanonim757@gmail.com","widzi2005",maskedTextBox2.Text,"Регистрация","Вы зарегестрировались");
             }
             else
             {

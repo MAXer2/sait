@@ -82,6 +82,7 @@
             this.passTextBox.TabIndex = 23;
             this.passTextBox.UseSystemPasswordChar = true;
             this.passTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.maskedTextBox2_MouseClick);
+            this.passTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LoginTextBox_KeyDown);
             // 
             // loginTextBox
             // 
@@ -95,6 +96,7 @@
             this.loginTextBox.Text = "Логин";
             this.loginTextBox.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.loginTextBox_MaskInputRejected);
             this.loginTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.maskedTextBox1_MouseClick);
+            this.loginTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LoginTextBox_KeyDown);
             // 
             // label3
             // 
@@ -172,7 +174,7 @@
             this.bunifuFlatButton2.IconZoom = 90D;
             this.bunifuFlatButton2.IsTab = false;
             this.bunifuFlatButton2.Location = new System.Drawing.Point(10, 5);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(83)))), ((int)(((byte)(111)))));
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(72)))), ((int)(((byte)(92)))));
@@ -208,7 +210,7 @@
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
             this.bunifuFlatButton1.Location = new System.Drawing.Point(181, 4);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(173)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(150)))), ((int)(((byte)(163)))));

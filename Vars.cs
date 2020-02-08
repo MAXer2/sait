@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-namespace WindowsFormsApp1
+namespace Сайтец
 {
     public static class Vars
     {
@@ -27,58 +27,14 @@ namespace WindowsFormsApp1
         public static Color PANEL_COLOR = Color.FromArgb(84,156,243);
         public static int size1 = 20;
         public static int size2 = 30;
-        /// <summary>
-        /// Поменять цвета всех кнопок
-        /// </summary>
 
-        public static string CONNECTION_STRING =
-           "SslMode=none;" +
-           "Server=db4free.net;" +
-           "database=ingenerka;" +
-           "port=3306;" +
-           "uid=ingenerka;" +
-           "pwd=Beavis1989;" +
-           "old guids=true;";
-        public static MySqlConnection CONN;
-
-        /// <summary>
-        /// Select-запрос
-        /// </summary>
-        /// <param name="sqlzapros"></param>
-        /// <returns></returns>
-        public static List<string> Select(string sqlzapros)
-        {
-            List<string> res = new List<string>();
-            MySqlCommand q = new MySqlCommand(sqlzapros, CONN);
-            MySqlDataReader r = q.ExecuteReader();
-
-            while (r.Read())
-            {
-                for (int inc = 0; inc < r.FieldCount; inc++)
-                {
-                    res.Add(r[inc].ToString());
-                }
-            }
-            r.Close();
-
-            return res;
-        }
-        /// <summary>
-        /// Update-запрос
-        /// </summary>
-        public static void Update(string zapros)
-        {
-            MySqlCommand q = new MySqlCommand(zapros, CONN);
-            MySqlDataReader r = q.ExecuteReader();
-            r.Close();
-        }
 
         /// <summary>
         /// Читаем дизайн из базы
         /// </summary>
         public static void ReadDesign()
         {
-            List<string> DefaultDesign = Select("SELECT Parameter, Value, objectType FROM DefaultDesign");
+            List<string> DefaultDesign = Form1.Select("SELECT Parameter, Value, objectType FROM DefaultDesign");
             
 
             for (int i =0; i < DefaultDesign.Count; i = i + 3)

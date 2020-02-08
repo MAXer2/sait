@@ -31,7 +31,11 @@ namespace Сайтец
             }
         }
 
+        private Point MouseHook;
+        private void LoginForm_MouseMove(object sender, MouseEventArgs e)
+        {
 
+        }
         private void maskedTextBox2_MouseClick(object sender, MouseEventArgs e)
         {
             label4.Visible = false;
@@ -72,6 +76,7 @@ namespace Сайтец
                 Form1.login.Visible = true;
               
             }
+
            
         }
 
@@ -93,6 +98,14 @@ namespace Сайтец
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void LoginTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                bunifuFlatButton1_Click(sender, null);
+            }
         }
     }
 }

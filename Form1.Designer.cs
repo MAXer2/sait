@@ -57,7 +57,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
@@ -91,6 +90,7 @@
             this.panel1.Size = new System.Drawing.Size(835, 64);
             this.panel1.TabIndex = 12;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // AdminButton
             // 
@@ -113,7 +113,7 @@
             this.AdminButton.IconVisible = true;
             this.AdminButton.IconZoom = 90D;
             this.AdminButton.IsTab = false;
-            this.AdminButton.Location = new System.Drawing.Point(516, 14);
+            this.AdminButton.Location = new System.Drawing.Point(345, 14);
             this.AdminButton.Name = "AdminButton";
             this.AdminButton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(80)))), ((int)(((byte)(104)))));
             this.AdminButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
@@ -231,7 +231,7 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
-            this.label3.Location = new System.Drawing.Point(270, 55);
+            this.label3.Location = new System.Drawing.Point(272, 55);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 26);
             this.label3.TabIndex = 2;
@@ -282,7 +282,7 @@
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
-            this.label8.Location = new System.Drawing.Point(313, 245);
+            this.label8.Location = new System.Drawing.Point(312, 245);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(110, 23);
             this.label8.TabIndex = 18;
@@ -425,6 +425,7 @@
             this.Text = "глав форм";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Form1_Scroll);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -461,7 +462,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label13;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;

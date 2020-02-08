@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace Сайтец
 {
     public partial class ButtonDesign : Form
     {
@@ -129,7 +129,7 @@ namespace WindowsFormsApp1
 
 
 
-            Vars.Update("UPDATE DefaultDesign SET Value='" +
+            Form1.Update("UPDATE DefaultDesign SET Value='" +
                 Vars.LABEL_FONT.FontFamily.Name + "," + Vars.BUTTON_FONT.Size.ToString() +
                 "' WHERE Parameter = 'Label_Font' AND objectType='System.Windows.Forms.Label'");
 
@@ -150,7 +150,7 @@ namespace WindowsFormsApp1
             Vars.BUTTON_IMAGE = pictureBox2.Image;
             Vars.ColorAllButtons(this);
 
-            Vars.Update("UPDATE DefaultDesign SET Value='" +
+            Form1.Update("UPDATE DefaultDesign SET Value='" +
               openFileDialog1.FileName.ToString()+
               "' WHERE Parameter = 'Button_Image' AND objectType='System.Windows.Forms.Button'");
 
@@ -167,7 +167,7 @@ namespace WindowsFormsApp1
                 pictureBox1.Load(openFileDialog1.FileName);
                 Vars.BUTTON_BACKGROUND_IMAGE = pictureBox1.Image;
                 Vars.ColorAllButtons(this);
-                Vars.Update("UPDATE DefaultDesign SET Value='" +
+                Form1.Update("UPDATE DefaultDesign SET Value='" +
                     Path.GetFileName(openFileDialog1.FileName) +
                     "' WHERE Parameter = 'Button_Background_Image' AND objectType='System.Windows.Forms.Button'");
                 try
@@ -191,7 +191,7 @@ namespace WindowsFormsApp1
             int x = Vars.BUTTON_COLOR.ToArgb();
 
 
-            Vars.Update("UPDATE DefaultDesign SET Value='" + 
+            Form1.Update("UPDATE DefaultDesign SET Value='" + 
                 x.ToString() + 
                 "' WHERE Parameter = 'Button_Color' AND objectType='System.Windows.Forms.Button'");
 
@@ -204,7 +204,7 @@ namespace WindowsFormsApp1
             Vars.BUTTON_TEXT_COLOR = colorDialog1.Color;
             Vars.ColorAllButtons(this);
 
-            Vars.Update("UPDATE DefaultDesign SET Value='" +
+            Form1.Update("UPDATE DefaultDesign SET Value='" +
                  Vars.BUTTON_TEXT_COLOR.ToArgb().ToString() +
                 "' WHERE Parameter = 'Button_Font_Color' AND objectType='System.Windows.Forms.Button'");
 
@@ -220,7 +220,7 @@ namespace WindowsFormsApp1
             Vars.ColorAllButtons(this);
             //fontDialog1.Color
 
-            Vars.Update("UPDATE DefaultDesign SET Value='" +
+            Form1.Update("UPDATE DefaultDesign SET Value='" +
                 Vars.BUTTON_FONT.FontFamily.Name + "," + Vars.BUTTON_FONT.Size.ToString() +
             "' WHERE Parameter = 'Button_Font' AND objectType='System.Windows.Forms.Button'");
 
@@ -233,7 +233,7 @@ namespace WindowsFormsApp1
             colorDialog1.ShowDialog();
             Vars.LABEL_COLOR = colorDialog1.Color;
             Vars.ColorAllButtons(this);
-            Vars.Update("UPDATE DefaultDesign SET Value='" +
+            Form1.Update("UPDATE DefaultDesign SET Value='" +
                Vars.LABEL_COLOR.ToArgb().ToString() +
                "' WHERE Parameter = 'Button_Color' AND objectType='System.Windows.Forms.Button'");
 
@@ -246,14 +246,26 @@ namespace WindowsFormsApp1
             colorDialog1.ShowDialog();
             Vars.PANEL_COLOR = colorDialog1.Color;
             Vars.ColorAllButtons(this);
-            Vars.Update("UPDATE DefaultDesign SET Value='" +
+            Form1.Update("UPDATE DefaultDesign SET Value='" +
               Vars.PANEL_COLOR.ToArgb().ToString() +
               "' WHERE Parameter = 'Panel_Color' AND objectType='System.Windows.Forms.Panel'");
 
 
         }
 
+        private Point MouseHook;
+        private void ButtonDesign_MouseMove(object sender, MouseEventArgs e)
+        {
 
+            Cursor = Cursors.Default;
+            if (e.Button != MouseButtons.Left) MouseHook = e.Location;
+            else
+            {
+                Location = new Point((Size)Location - (Size)MouseHook + (Size)e.Location);
+                Cursor = Cursors.Hand;
+            }
+
+        }
 
         private void BunifuFlatButton12_Click(object sender, EventArgs e)
         {
