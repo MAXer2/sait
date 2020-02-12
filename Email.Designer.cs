@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "Email";
             this.Text = "Email";
+            this.Load += new System.EventHandler(this.Email_Load);
             this.ResumeLayout(false);
 
         }

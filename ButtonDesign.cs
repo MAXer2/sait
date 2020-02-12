@@ -175,6 +175,9 @@ namespace Сайтец
                     File.Copy(openFileDialog1.FileName, @"..\..\images\FON\" + Path.GetFileName(openFileDialog1.FileName));
                 }
                 catch (Exception) { }
+
+              
+
             }
         }
 
@@ -194,6 +197,10 @@ namespace Сайтец
             Form1.Update("UPDATE DefaultDesign SET Value='" + 
                 x.ToString() + 
                 "' WHERE Parameter = 'Button_Color' AND objectType='System.Windows.Forms.Button'");
+
+            Form1.Update("UPDATE UniqueDesign SET objectName = 'button1', Value='" +
+                   x.ToString() +
+                  "' WHERE Parameter = 'Button_Image' AND form = 'ButtonDesign' AND objectType='System.Windows.Forms.Button'");
 
         }
       
@@ -304,6 +311,27 @@ namespace Сайтец
         }
 
         private void ButtonDesign_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+            Button btn = button1;
+
+            List<string> UniqueDesign = Form1.Select("SELECT Parameter, Value, ObjectType, Form, ObjectName FROM UniqueDesign");
+
+            btn.BackColor = Color.FromArgb(Convert.ToInt32(UniqueDesign[4]));
+
+          
+           
+
+
+
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
         {
 
         }
