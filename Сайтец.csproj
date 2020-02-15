@@ -72,11 +72,11 @@
     <Compile Include="Email.Designer.cs">
       <DependentUpon>Email.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginControl.cs">
+    <Compile Include="Filter.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="LoginControl.Designer.cs">
-      <DependentUpon>LoginControl.cs</DependentUpon>
+    <Compile Include="Filter.Designer.cs">
+      <DependentUpon>Filter.cs</DependentUpon>
     </Compile>
     <Compile Include="moneyControl.cs">
       <SubType>UserControl</SubType>
@@ -180,8 +180,8 @@
     <EmbeddedResource Include="Email.resx">
       <DependentUpon>Email.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginControl.resx">
-      <DependentUpon>LoginControl.cs</DependentUpon>
+    <EmbeddedResource Include="Filter.resx">
+      <DependentUpon>Filter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="moneyControl.resx">
       <DependentUpon>moneyControl.cs</DependentUpon>

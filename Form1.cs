@@ -18,6 +18,7 @@ namespace Сайтец
         public static int admin = 0;
         public static moneyControl money = new moneyControl();
         public static LoginControl1 login = new LoginControl1();
+        public static Filter filter = new Filter();
 
 
         List<Image> banners = new List<Image>();
@@ -29,7 +30,7 @@ namespace Сайтец
             login.Location = new Point(422,11);
             panel1.Controls.Add(login);
             money.Visible = false;
-           money.Location = new Point(500, 14);
+            money.Location = new Point(500, 14);
             panel1.Controls.Add(money);
 
             banners.Add(Properties.Resources.banner1);
@@ -127,19 +128,19 @@ namespace Сайтец
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+
+        void Filter()
         {
+            String zapros = "SELECT id FROM Products WHERE 1=1";
+            if (textBox1.Text != "")
+                zapros += " AND price <= " + textBox1.Text;
 
-            KuplennyeTovary = new List<string>();
-            CONN = new MySqlConnection(CONNECTION_STRING);
-            connect();
+            List<string> products = Select(zapros);
+            panel3.Controls.Clear();
 
-            List<string> products = Select("SELECT id FROM Products");
-
-           //// Vars.ColorAllButtons(this);
             int x = 50;
             int y = 20;
-            for (int i = 0; i < products.Count; i = i + 1 )
+            for (int i = 0; i < products.Count; i = i + 1)
             {
                 ProductUserControl product = new ProductUserControl(products[i]);
                 product.Location = new Point(x, y);
@@ -156,12 +157,20 @@ namespace Сайтец
                         x = 50;
                     }
                 }
-                
-                }
+            }
             panel3.Visible = true;
             panel4.Visible = false;
             panel5.Visible = false;
             label1.ForeColor = Color.FromArgb(93, 110, 134);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+            KuplennyeTovary = new List<string>();
+            CONN = new MySqlConnection(CONNECTION_STRING);
+            connect();
+            Filter();
         }
 
         private void bannerPictureBox_Click(object sender, EventArgs e)
@@ -288,7 +297,8 @@ namespace Сайтец
 
         private void Label6_Click(object sender, EventArgs e)
         {
-
+            Email EE = new Email();
+            EE.Show();
         }
 
         private void Panel3_Paint(object sender, PaintEventArgs e)
@@ -308,7 +318,24 @@ namespace Сайтец
         private void AdminButton_Click(object sender, EventArgs e)
         {
              ButtonDesign D = new ButtonDesign();
-            D.Show();
+             D.Show();
+        }
+
+        private void BunifuTextbox1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void Panel2_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void Panel2_Click(object sender, EventArgs e)
+        {
+            Filter();
+        }
+
+        private void BunifuThinButton21_Click(object sender, EventArgs e)
+        {
 
         }
     }
