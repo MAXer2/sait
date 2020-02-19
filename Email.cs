@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Сайтец
 {
@@ -15,24 +17,24 @@ namespace Сайтец
 
         public static void SendMail()
         {
-            // отправитель - устанавливаем адрес и отображаемое в письме имя
-            MailAddress fromm = new MailAddress("madkeypro@gmail.com", "MadKeys");
-            MailAddress to = new MailAddress("xmaxer2@yandex.ru");
-            // создаем объект сообщения
-            MailMessage m = new MailMessage(fromm, to);
-            // тема письма
-            m.Subject = "Тест";
-            // текст письма
-            m.Body = "<h2>Письмо-тест работы smtp-клиента</h2>";
-            // письмо представляет код html
-            m.IsBodyHtml = true;
-            // адрес smtp-сервера и порт, с которого будем отправлять письмо
-            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-            // логин и пароль
-            smtp.Credentials = new NetworkCredential("madkeypro@gmail.com", "maxer2005");
-            smtp.EnableSsl = true;
-            smtp.Send(m);
-            Console.Read();
+            MailAddress fromMailAddress = new MailAddress("madkeyspro@gmail.com", "Mad Key");
+            MailAddress toAddress = new MailAddress("xmaxer2@yandex.ru", "Uncle Bob");
+
+            using (MailMessage mailMessage = new MailMessage(fromMailAddress, toAddress))
+            using (SmtpClient smtpClient = new SmtpClient())
+            {
+                mailMessage.Subject = "My Subject";
+                mailMessage.Body = "Text in the body";
+
+                smtpClient.Host = "smtp.gmail.com";
+                smtpClient.Port = 587;
+                smtpClient.EnableSsl = true;
+                smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+                smtpClient.UseDefaultCredentials = false;
+                smtpClient.Credentials = new NetworkCredential(fromMailAddress.Address, "maxer2005");
+
+                smtpClient.Send(mailMessage);
+            }
         }
 
         private void Email_Load(object sender, EventArgs e)

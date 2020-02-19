@@ -13,12 +13,13 @@ namespace Сайтец
 {
     public partial class Form1 : Form
     {
+        public static int maxPrice;
+        public static int minnPrice;
         public static bool successLogin = false;
-
+     
         public static int admin = 0;
         public static moneyControl money = new moneyControl();
         public static LoginControl1 login = new LoginControl1();
-        public static Filter filter = new Filter();
 
 
         List<Image> banners = new List<Image>();
@@ -32,7 +33,7 @@ namespace Сайтец
             money.Visible = false;
             money.Location = new Point(500, 14);
             panel1.Controls.Add(money);
-
+            tableLayoutPanel1.ColumnStyles[1].Width = 0;
             banners.Add(Properties.Resources.banner1);
             banners.Add(Properties.Resources.banner2);
             banners.Add(Properties.Resources.banner3);
@@ -47,8 +48,7 @@ namespace Сайтец
                 bannerIndex = 0;
             }
 
-            AdminButton.Visible = (admin == 1);
-                
+            AdminButton.Visible = (admin == 1);                
         }
 
         private void апнрапрToolStripMenuItem_Click(object sender, EventArgs e)
@@ -129,11 +129,13 @@ namespace Сайтец
         }
 
 
-        void Filter()
-        {
+        public void Filterrr()
+        { 
             String zapros = "SELECT id FROM Products WHERE 1=1";
-            if (textBox1.Text != "")
-                zapros += " AND price <= " + textBox1.Text;
+            if (minprice.Text != "")
+                zapros += " AND price >= " + Convert.ToInt32(minprice.Text);
+            if (maxpricebutton.Text != "")
+                zapros += " AND price <=" + Convert.ToInt32(maxpricebutton.Text);
 
             List<string> products = Select(zapros);
             panel3.Controls.Clear();
@@ -151,26 +153,27 @@ namespace Сайтец
                     panel3.Controls.Add(product);
                     x = x + 250;
 
-                    if (x > this.Width - 250)
+                    if (x > this.Width - 450)
                     {
                         y = y + 200;
                         x = 50;
                     }
                 }
             }
+
             panel3.Visible = true;
             panel4.Visible = false;
             panel5.Visible = false;
             label1.ForeColor = Color.FromArgb(93, 110, 134);
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
             KuplennyeTovary = new List<string>();
             CONN = new MySqlConnection(CONNECTION_STRING);
             connect();
-            Filter();
+            Filterrr();
         }
 
         private void bannerPictureBox_Click(object sender, EventArgs e)
@@ -331,10 +334,46 @@ namespace Сайтец
 
         private void Panel2_Click(object sender, EventArgs e)
         {
-            Filter();
+            Filterrr();
         }
 
         private void BunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            if (tableLayoutPanel1.ColumnStyles[1].Width != 0)
+                tableLayoutPanel1.ColumnStyles[1].Width = 0;
+            else
+            tableLayoutPanel1.ColumnStyles[1].Width = 35;
+
+        }
+
+        private void Label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            Filterrr();
+        }
+
+        private void BunifuTrackbar2_ValueChanged(object sender, EventArgs e)
+        {
+            maxpricebutton.Text = bunifuTrackbar2.Value.ToString();
+            maxPrice = Convert.ToInt32(maxpricebutton.Text);
+        }
+
+        private void BunifuTrackbar1_ValueChanged(object sender, EventArgs e)
+        {
+            minprice.Text = bunifuTrackbar1.Value.ToString();
+            minnPrice = Convert.ToInt32(minprice.Text);
+        }
+
+        private void Minprice_OnValueChanged(object sender, EventArgs e)
         {
 
         }
