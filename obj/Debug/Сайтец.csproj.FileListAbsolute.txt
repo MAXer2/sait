@@ -27,8 +27,6 @@ C:\Users\Abra\1\sait-master (5)\sait-master\obj\Debug\Сайтец.tovar.resourc
 C:\Users\Abra\1\sait-master (5)\sait-master\obj\Debug\Сайтец.earn.resources
 C:\Users\Student\Source\Repos\sait\obj\Debug\Сайтец.csprojAssemblyReference.cache
 C:\Users\Student\Source\Repos\sait\obj\Debug\Сайтец.ButtonDesign.resources
-C:\Users\Student\Source\Repos\sait\obj\Debug\Сайтец.Email.resources
-C:\Users\Student\Source\Repos\sait\obj\Debug\Сайтец.Filter.resources
 C:\Users\Student\Source\Repos\sait\obj\Debug\Сайтец.moneyControl.resources
 C:\Users\Student\Source\Repos\sait\obj\Debug\Сайтец.earn.resources
 C:\Users\Student\Source\Repos\sait\obj\Debug\Сайтец.Form1.resources

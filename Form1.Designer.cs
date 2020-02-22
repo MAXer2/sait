@@ -48,6 +48,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
@@ -63,7 +64,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.bunifuThinButton21 = new ns1.BunifuThinButton2();
             this.earnButton = new ns1.BunifuThinButton2();
-            this.label3 = new System.Windows.Forms.Label();
             this.bunifuThinButton23 = new ns1.BunifuThinButton2();
             this.bunifuThinButton24 = new ns1.BunifuThinButton2();
             this.bunifuThinButton25 = new ns1.BunifuThinButton2();
@@ -311,6 +311,19 @@
             this.button1.TabIndex = 1;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
+            this.label3.Location = new System.Drawing.Point(461, 127);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 23);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Скидки";
+            this.label3.Click += new System.EventHandler(this.Label3_Click);
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
@@ -534,6 +547,7 @@
             this.earnButton.ActiveForecolor = System.Drawing.Color.White;
             this.earnButton.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
             this.earnButton.BackColor = System.Drawing.Color.White;
+            this.earnButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("earnButton.BackgroundImage")));
             this.earnButton.ButtonText = "Испытай удачу";
             this.earnButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.earnButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -543,26 +557,13 @@
             this.earnButton.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
             this.earnButton.IdleForecolor = System.Drawing.Color.White;
             this.earnButton.IdleLineColor = System.Drawing.Color.White;
-            this.earnButton.Location = new System.Drawing.Point(495, 57);
+            this.earnButton.Location = new System.Drawing.Point(504, 57);
             this.earnButton.Margin = new System.Windows.Forms.Padding(5);
             this.earnButton.Name = "earnButton";
             this.earnButton.Size = new System.Drawing.Size(135, 40);
             this.earnButton.TabIndex = 28;
             this.earnButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.earnButton.Click += new System.EventHandler(this.earn_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
-            this.label3.Location = new System.Drawing.Point(461, 127);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 23);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Скидки";
-            this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
             // bunifuThinButton23
             // 
@@ -582,7 +583,7 @@
             this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
             this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton23.Location = new System.Drawing.Point(394, 57);
+            this.bunifuThinButton23.Location = new System.Drawing.Point(397, 57);
             this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton23.Name = "bunifuThinButton23";
             this.bunifuThinButton23.Size = new System.Drawing.Size(101, 40);

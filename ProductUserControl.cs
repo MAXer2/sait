@@ -23,10 +23,13 @@ namespace Сайтец
 
             List<string> infaOTovare = Form1.Select("SELECT Title, Price, Image FROM `Products`" +
                 " WHERE id = '" + id + "'");
-            label2.Text = infaOTovare[0].ToString();
+            nameTextBox.Text = infaOTovare[0].ToString();
             label1.Text = infaOTovare[1].ToString() + " Р";
 
-
+            if (nameTextBox.Text.Length < 12)
+            {
+                nameTextBox.Font = new Font("T-FLEX Type T", 20F);
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -41,6 +44,11 @@ namespace Сайтец
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label2_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -140,23 +140,23 @@ namespace Сайтец
             List<string> products = Select(zapros);
             panel3.Controls.Clear();
 
-            int x = 50;
+            int x = 10;
             int y = 20;
             for (int i = 0; i < products.Count; i = i + 1)
             {
                 ProductUserControl product = new ProductUserControl(products[i]);
                 product.Location = new Point(x, y);
-                product.Size = new Size(220, 150);
+                product.Size = new Size(280, 190);
 
                 //if (KuplennyeTovary.Contains(products[i]))
                 {
                     panel3.Controls.Add(product);
-                    x = x + 250;
+                    x = x + 290;
 
                     if (x > this.Width - 450)
                     {
                         y = y + 200;
-                        x = 50;
+                        x = 10;
                     }
                 }
             }

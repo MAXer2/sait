@@ -66,12 +66,6 @@
     <Compile Include="DesignMenu.Designer.cs">
       <DependentUpon>DesignMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Filter.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Filter.Designer.cs">
-      <DependentUpon>Filter.cs</DependentUpon>
-    </Compile>
     <Compile Include="moneyControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -170,9 +164,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DesignMenu.resx">
       <DependentUpon>DesignMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Filter.resx">
-      <DependentUpon>Filter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="moneyControl.resx">
       <DependentUpon>moneyControl.cs</DependentUpon>
