@@ -36,5 +36,10 @@ namespace Сайтец
             }
 
         }
+
+        private void Earn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

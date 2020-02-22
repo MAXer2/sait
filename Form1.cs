@@ -186,11 +186,6 @@ namespace Сайтец
 
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private Point MouseHook;
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
@@ -210,7 +205,6 @@ namespace Сайтец
             panel3.Visible= true;
             panel4.Visible = false;
             label6.ForeColor = Color.FromArgb(73, 90, 114);
-            label4.ForeColor = Color.FromArgb(73, 90, 114);
             label2.ForeColor = Color.FromArgb(73, 90, 114);
             label3.ForeColor = Color.FromArgb(73, 90, 114);
             label1.ForeColor = Color.FromArgb(93, 110, 134);
@@ -247,12 +241,8 @@ namespace Сайтец
 
         }
 
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void label4_Click(object sender, EventArgs e)
+        private void earn_Click(object sender, EventArgs e)
         {
             earn e1 = new earn ();
             e1.ShowDialog ();
@@ -267,7 +257,6 @@ namespace Сайтец
         private void Label2_Click(object sender, EventArgs e)
         {
             label6.ForeColor = Color.FromArgb(73, 90, 114);
-            label4.ForeColor = Color.FromArgb(73, 90, 114);
             label3.ForeColor = Color.FromArgb(73, 90, 114);
             label1.ForeColor = Color.FromArgb(73, 90, 114);
             label2.ForeColor = Color.FromArgb(93, 110, 134);
@@ -284,7 +273,6 @@ namespace Сайтец
             Controls.Add(loading);
            
             label6.ForeColor = Color.FromArgb(73, 90, 114);
-            label4.ForeColor = Color.FromArgb(73, 90, 114);
             label2.ForeColor = Color.FromArgb(73, 90, 114);
             label1.ForeColor = Color.FromArgb(73, 90, 114);
             label3.ForeColor = Color.FromArgb(93, 110, 134);
@@ -293,16 +281,6 @@ namespace Сайтец
             panel3.Visible = false;
         }
 
-        private void RichTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label6_Click(object sender, EventArgs e)
-        {
-            Email EE = new Email();
-            EE.Show();
-        }
 
         private void Panel3_Paint(object sender, PaintEventArgs e)
         {

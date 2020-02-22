@@ -66,12 +66,6 @@
     <Compile Include="DesignMenu.Designer.cs">
       <DependentUpon>DesignMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Email.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Email.Designer.cs">
-      <DependentUpon>Email.cs</DependentUpon>
-    </Compile>
     <Compile Include="Filter.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -96,16 +90,16 @@
     <Compile Include="korzina.Designer.cs">
       <DependentUpon>korzina.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginControl1.cs">
+    <Compile Include="Login\LoginControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="LoginControl1.Designer.cs">
+    <Compile Include="Login\LoginControl1.Designer.cs">
       <DependentUpon>LoginControl1.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="Login\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="Login\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="RecursiaCalc.cs">
@@ -114,10 +108,10 @@
     <Compile Include="RecursiaCalc.Designer.cs">
       <DependentUpon>RecursiaCalc.cs</DependentUpon>
     </Compile>
-    <Compile Include="SignInForm.cs">
+    <Compile Include="Login\SignInForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignInForm.Designer.cs">
+    <Compile Include="Login\SignInForm.Designer.cs">
       <DependentUpon>SignInForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductUserControl.cs">
@@ -177,9 +171,6 @@
     <EmbeddedResource Include="DesignMenu.resx">
       <DependentUpon>DesignMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Email.resx">
-      <DependentUpon>Email.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Filter.resx">
       <DependentUpon>Filter.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,16 +186,16 @@
     <EmbeddedResource Include="korzina.resx">
       <DependentUpon>korzina.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginControl1.resx">
+    <EmbeddedResource Include="Login\LoginControl1.resx">
       <DependentUpon>LoginControl1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="Login\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecursiaCalc.resx">
       <DependentUpon>RecursiaCalc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignInForm.resx">
+    <EmbeddedResource Include="Login\SignInForm.resx">
       <DependentUpon>SignInForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductUserControl.resx">
