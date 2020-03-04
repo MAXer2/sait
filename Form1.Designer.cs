@@ -69,6 +69,8 @@
             this.bunifuThinButton25 = new ns1.BunifuThinButton2();
             this.bunifuThinButton26 = new ns1.BunifuThinButton2();
             this.bunifuThinButton27 = new ns1.BunifuThinButton2();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
@@ -246,6 +248,7 @@
             // panel3
             // 
             this.panel3.AutoScroll = true;
+            this.panel3.Controls.Add(this.treeView1);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(3, 3);
@@ -342,6 +345,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.label12);
@@ -494,7 +498,7 @@
             this.bunifuTrackbar1.BorderRadius = 0;
             this.bunifuTrackbar1.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(130)))), ((int)(((byte)(154)))));
             this.bunifuTrackbar1.Location = new System.Drawing.Point(5, 15);
-            this.bunifuTrackbar1.MaximumValue = 100;
+            this.bunifuTrackbar1.MaximumValue = 9999;
             this.bunifuTrackbar1.Name = "bunifuTrackbar1";
             this.bunifuTrackbar1.Size = new System.Drawing.Size(197, 30);
             this.bunifuTrackbar1.SliderRadius = 0;
@@ -690,6 +694,20 @@
             this.bunifuThinButton27.TabIndex = 33;
             this.bunifuThinButton27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(49, 205);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 27;
+            // 
+            // treeView1
+            // 
+            this.treeView1.Location = new System.Drawing.Point(561, 243);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(121, 97);
+            this.treeView1.TabIndex = 27;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -770,6 +788,8 @@
         private ns1.BunifuThinButton2 bunifuThinButton25;
         private ns1.BunifuThinButton2 bunifuThinButton26;
         private ns1.BunifuThinButton2 bunifuThinButton27;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TreeView treeView1;
     }
 }
 

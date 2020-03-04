@@ -21,6 +21,12 @@ namespace Сайтец
            " WHERE id = '" + id + "'");
             labelTovar.Text = infaOTovare[0].ToString();
             label1.Text = infaOTovare[1].ToString() + " Р";
+            
+            try
+            {
+                pictureBox1.Load(infaOTovare[2].ToString());
+            }
+            catch (Exception) { }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -74,6 +80,11 @@ namespace Сайтец
         }
 
         private void Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
         {
 
         }

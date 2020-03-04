@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductUserControl));
             this.bunifuCards1 = new ns1.BunifuCards();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
             this.bunifuCards1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -56,6 +56,22 @@
             this.bunifuCards1.Size = new System.Drawing.Size(282, 62);
             this.bunifuCards1.TabIndex = 4;
             this.bunifuCards1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards1_Paint);
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
+            this.nameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nameTextBox.Font = new System.Drawing.Font("T-FLEX Type T", 15.75F);
+            this.nameTextBox.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.nameTextBox.Location = new System.Drawing.Point(5, 8);
+            this.nameTextBox.Multiline = true;
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.ReadOnly = true;
+            this.nameTextBox.Size = new System.Drawing.Size(189, 50);
+            this.nameTextBox.TabIndex = 4;
+            this.nameTextBox.Text = "Assassin\'s creed: revival";
+            this.nameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nameTextBox.TextChanged += new System.EventHandler(this.Label2_TextChanged);
             // 
             // label3
             // 
@@ -82,28 +98,13 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(18, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(0, -10);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(266, 118);
+            this.pictureBox1.Size = new System.Drawing.Size(282, 142);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // nameTextBox
-            // 
-            this.nameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
-            this.nameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.nameTextBox.Font = new System.Drawing.Font("T-FLEX Type T", 15.75F);
-            this.nameTextBox.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.nameTextBox.Location = new System.Drawing.Point(5, 8);
-            this.nameTextBox.Multiline = true;
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.ReadOnly = true;
-            this.nameTextBox.Size = new System.Drawing.Size(189, 50);
-            this.nameTextBox.TabIndex = 4;
-            this.nameTextBox.Text = "Assassin\'s creed: revival";
-            this.nameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nameTextBox.TextChanged += new System.EventHandler(this.Label2_TextChanged);
             // 
             // ProductUserControl
             // 

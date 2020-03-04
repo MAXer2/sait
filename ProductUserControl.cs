@@ -30,6 +30,12 @@ namespace Сайтец
             {
                 nameTextBox.Font = new Font("T-FLEX Type T", 20F);
             }
+
+            try
+            {
+                pictureBox1.Load(infaOTovare[2].ToString());
+            }
+            catch (Exception) { }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

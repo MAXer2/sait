@@ -137,6 +137,9 @@ namespace Сайтец
             if (maxpricebutton.Text != "")
                 zapros += " AND price <=" + Convert.ToInt32(maxpricebutton.Text);
 
+            if (textBox1.Text != "")
+                zapros += " AND upper(Title) like upper ('"+ textBox1.Text + "%')";
+
             List<string> products = Select(zapros);
             panel3.Controls.Clear();
 

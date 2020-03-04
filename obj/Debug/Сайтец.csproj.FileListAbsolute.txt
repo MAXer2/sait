@@ -53,3 +53,30 @@ C:\Users\Student\Source\Repos\sait\obj\Debug\Сайтец.RecursiaCalc.resources
 C:\Users\Student\Source\Repos\sait\obj\Debug\Сайтец.YAXZCHTOETO.resources
 C:\Users\Student\Source\Repos\sait\obj\Debug\Сайтец.csproj.CoreCompileInputs.cache
 C:\Users\Student\Source\Repos\sait\obj\Debug\Сайтец.csproj.CopyComplete
+C:\Users\Student\Desktop\не жалко\sait\bin\Debug\Сайтец.exe.config
+C:\Users\Student\Desktop\не жалко\sait\bin\Debug\Сайтец.exe
+C:\Users\Student\Desktop\не жалко\sait\bin\Debug\Сайтец.pdb
+C:\Users\Student\Desktop\не жалко\sait\bin\Debug\MySql.Data.dll
+C:\Users\Student\Desktop\не жалко\sait\obj\Debug\Сайтец.csprojAssemblyReference.cache
+C:\Users\Student\Desktop\не жалко\sait\obj\Debug\Сайтец.ButtonDesign.resources
+C:\Users\Student\Desktop\не жалко\sait\obj\Debug\Сайтец.DesignMenu.resources
+C:\Users\Student\Desktop\не жалко\sait\obj\Debug\Сайтец.moneyControl.resources
+C:\Users\Student\Desktop\не жалко\sait\obj\Debug\Сайтец.earn.resources
+C:\Users\Student\Desktop\не жалко\sait\obj\Debug\Сайтец.Form1.resources
+C:\Users\Student\Desktop\не жалко\sait\obj\Debug\Сайтец.korzina.resources
+C:\Users\Student\Desktop\не жалко\sait\obj\Debug\Сайтец.LoginControl1.resources
+C:\Users\Student\Desktop\не жалко\sait\obj\Debug\Сайтец.LoginForm.resources
+C:\Users\Student\Desktop\не жалко\sait\obj\Debug\Сайтец.RecursiaCalc.resources
+C:\Users\Student\Desktop\не жалко\sait\obj\Debug\Сайтец.SignInForm.resources
+C:\Users\Student\Desktop\не жалко\sait\obj\Debug\Сайтец.ProductUserControl.resources
+C:\Users\Student\Desktop\не жалко\sait\obj\Debug\Сайтец.Properties.Resources.resources
+C:\Users\Student\Desktop\не жалко\sait\obj\Debug\Сайтец.KorzinaControl.resources
+C:\Users\Student\Desktop\не жалко\sait\obj\Debug\Сайтец.tovar.resources
+C:\Users\Student\Desktop\не жалко\sait\obj\Debug\Сайтец.UserControl2.resources
+C:\Users\Student\Desktop\не жалко\sait\obj\Debug\Сайтец.WebForm.resources
+C:\Users\Student\Desktop\не жалко\sait\obj\Debug\Сайтец.YAXZCHTOETO.resources
+C:\Users\Student\Desktop\не жалко\sait\obj\Debug\Сайтец.csproj.GenerateResource.cache
+C:\Users\Student\Desktop\не жалко\sait\obj\Debug\Сайтец.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\не жалко\sait\obj\Debug\Сайтец.csproj.CopyComplete
+C:\Users\Student\Desktop\не жалко\sait\obj\Debug\Сайтец.exe
+C:\Users\Student\Desktop\не жалко\sait\obj\Debug\Сайтец.pdb

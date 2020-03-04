@@ -88,7 +88,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
             this.panel1.Location = new System.Drawing.Point(-17, 810);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1437, 68);
             this.panel1.TabIndex = 6;
@@ -98,7 +98,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Location = new System.Drawing.Point(33, 109);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(221, 141);
             this.panel3.TabIndex = 8;
@@ -109,18 +109,20 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(221, 126);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(80)))), ((int)(((byte)(104)))));
             this.panel2.Controls.Add(this.button1);
             this.panel2.Location = new System.Drawing.Point(-100, -12);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(728, 41);
             this.panel2.TabIndex = 7;
@@ -157,7 +159,7 @@
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.richTextBox1.ForeColor = System.Drawing.Color.DimGray;
             this.richTextBox1.Location = new System.Drawing.Point(28, 255);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(346, 290);
             this.richTextBox1.TabIndex = 12;
@@ -210,7 +212,7 @@
             this.bunifuTileButton2.LabelPosition = 29;
             this.bunifuTileButton2.LabelText = "Добавить в корзину";
             this.bunifuTileButton2.Location = new System.Drawing.Point(375, 207);
-            this.bunifuTileButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuTileButton2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuTileButton2.Name = "bunifuTileButton2";
             this.bunifuTileButton2.Size = new System.Drawing.Size(208, 39);
             this.bunifuTileButton2.TabIndex = 11;
@@ -234,7 +236,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "tovar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.tovar_Load);
