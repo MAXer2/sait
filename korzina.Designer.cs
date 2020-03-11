@@ -60,10 +60,13 @@
             // 
             this.button2.BackColor = System.Drawing.Color.Brown;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(664, 16);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(665, 17);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(28, 23);
+            this.button2.Size = new System.Drawing.Size(24, 23);
             this.button2.TabIndex = 30;
+            this.button2.Text = "x";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
@@ -92,7 +95,7 @@
             this.label10.ForeColor = System.Drawing.Color.DimGray;
             this.label10.Location = new System.Drawing.Point(480, 269);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(185, 36);
+            this.label10.Size = new System.Drawing.Size(143, 29);
             this.label10.TabIndex = 10;
             this.label10.Text = "__________";
             // 
@@ -103,7 +106,7 @@
             this.label11.ForeColor = System.Drawing.Color.DimGray;
             this.label11.Location = new System.Drawing.Point(475, 303);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(108, 31);
+            this.label11.Size = new System.Drawing.Size(87, 25);
             this.label11.TabIndex = 11;
             this.label11.Text = "Итого : ";
             // 
@@ -114,7 +117,7 @@
             this.label14.ForeColor = System.Drawing.Color.DarkGray;
             this.label14.Location = new System.Drawing.Point(67, 47);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(65, 24);
+            this.label14.Size = new System.Drawing.Size(50, 18);
             this.label14.TabIndex = 20;
             this.label14.Text = "Товар";
             // 
@@ -125,7 +128,7 @@
             this.label15.ForeColor = System.Drawing.Color.DarkGray;
             this.label15.Location = new System.Drawing.Point(299, 47);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(117, 24);
+            this.label15.Size = new System.Drawing.Size(92, 18);
             this.label15.TabIndex = 21;
             this.label15.Text = "Количество";
             // 
@@ -136,7 +139,7 @@
             this.label16.ForeColor = System.Drawing.Color.DarkGray;
             this.label16.Location = new System.Drawing.Point(599, 47);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(68, 24);
+            this.label16.Size = new System.Drawing.Size(56, 18);
             this.label16.TabIndex = 22;
             this.label16.Text = "Сумма";
             // 
@@ -183,7 +186,7 @@
             // 
             this.SummaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SummaLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.SummaLabel.Location = new System.Drawing.Point(570, 304);
+            this.SummaLabel.Location = new System.Drawing.Point(568, 303);
             this.SummaLabel.Name = "SummaLabel";
             this.SummaLabel.Size = new System.Drawing.Size(108, 31);
             this.SummaLabel.TabIndex = 30;

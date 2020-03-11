@@ -13,14 +13,30 @@ namespace Сайтец
     public partial class tovar : Form
     {
         string ident;
+        int price;
+        int leng;
         public tovar(string id)
         {
             InitializeComponent();
             ident = id;
             List<string> infaOTovare = Form1.Select("SELECT Title, Price, Image FROM `Products`" +
-           " WHERE id = '" + id + "'");
+                " WHERE id = '" + id + "'");
+
+           
             labelTovar.Text = infaOTovare[0].ToString();
-            label1.Text = infaOTovare[1].ToString() + " Р";
+            leng = labelTovar.Text.Length;
+            if (leng >= 17)
+            {
+                int sizefont = Convert.ToInt32(labelTovar.Font.Size);
+                labelTovar.Font = new Font("Microsoft Sans Serif", sizefont - 7);
+            } else if (leng >= 30)
+            {
+
+                int sizefont = Convert.ToInt32(labelTovar.Font.Size);
+                labelTovar.Font = new Font("Microsoft Sans Serif", sizefont - 20);
+            }
+            price = Convert.ToInt32(infaOTovare[1].ToString());
+            label1.Text = price + " Р";
             
             try
             {
@@ -36,9 +52,8 @@ namespace Сайтец
 
         private void bunifuTileButton1_Click(object sender, EventArgs e)
         {
-          WebForm w = new WebForm();
-          w.ShowDialog();
-
+            WebForm w = new WebForm();
+            w.ShowDialog();
         }
 
         private void tovar_Load(object sender, EventArgs e)
@@ -63,7 +78,8 @@ namespace Сайтец
 
         private void bunifuTileButton2_Click(object sender, EventArgs e)
         {
-            Form1.KuplennyeTovary.Add(ident);
+            korzina.KuplennyeTovary.Add(ident);
+            korzina.TotalPrice = korzina.TotalPrice + price;
 
             MessageBox.Show("Добавлено");
 

@@ -33,6 +33,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.AdminButton = new ns1.BunifuFlatButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,6 +44,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -51,6 +53,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -69,8 +72,6 @@
             this.bunifuThinButton25 = new ns1.BunifuThinButton2();
             this.bunifuThinButton26 = new ns1.BunifuThinButton2();
             this.bunifuThinButton27 = new ns1.BunifuThinButton2();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.treeView1 = new System.Windows.Forms.TreeView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
@@ -96,6 +97,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.AdminButton);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label5);
@@ -103,10 +105,22 @@
             this.panel1.Controls.Add(this.bunifuTextbox1);
             this.panel1.Location = new System.Drawing.Point(-1, -11);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(903, 64);
+            this.panel1.Size = new System.Drawing.Size(899, 64);
             this.panel1.TabIndex = 12;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Brown;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.Color.DarkRed;
+            this.button5.Location = new System.Drawing.Point(13, 14);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(22, 22);
+            this.button5.TabIndex = 31;
+            this.button5.Text = " ";
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // AdminButton
             // 
@@ -129,7 +143,7 @@
             this.AdminButton.IconVisible = true;
             this.AdminButton.IconZoom = 90D;
             this.AdminButton.IsTab = false;
-            this.AdminButton.Location = new System.Drawing.Point(345, 14);
+            this.AdminButton.Location = new System.Drawing.Point(388, 13);
             this.AdminButton.Name = "AdminButton";
             this.AdminButton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(80)))), ((int)(((byte)(104)))));
             this.AdminButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
@@ -149,7 +163,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(744, 35);
+            this.label7.Location = new System.Drawing.Point(737, 35);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 16);
             this.label7.TabIndex = 19;
@@ -160,18 +174,17 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(747, 20);
+            this.label5.Location = new System.Drawing.Point(740, 20);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 16);
             this.label5.TabIndex = 18;
             this.label5.Text = "0 товаров";
-            this.label5.Click += new System.EventHandler(this.label5_Click_1);
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox3.Location = new System.Drawing.Point(823, 13);
+            this.pictureBox3.Location = new System.Drawing.Point(816, 13);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(53, 46);
             this.pictureBox3.TabIndex = 17;
@@ -186,7 +199,7 @@
             this.bunifuTextbox1.ForeColor = System.Drawing.Color.SeaGreen;
             this.bunifuTextbox1.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox1.Icon")));
             this.bunifuTextbox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.bunifuTextbox1.Location = new System.Drawing.Point(18, 13);
+            this.bunifuTextbox1.Location = new System.Drawing.Point(42, 13);
             this.bunifuTextbox1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuTextbox1.Name = "bunifuTextbox1";
             this.bunifuTextbox1.Size = new System.Drawing.Size(265, 49);
@@ -194,7 +207,6 @@
             this.bunifuTextbox1.text = "Поиск";
             this.bunifuTextbox1.Visible = false;
             this.bunifuTextbox1.OnTextChange += new System.EventHandler(this.bunifuTextbox1_OnTextChange);
-            this.bunifuTextbox1.Click += new System.EventHandler(this.BunifuTextbox1_Click);
             // 
             // label1
             // 
@@ -243,7 +255,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(282, 10);
             this.panel4.TabIndex = 24;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // panel3
             // 
@@ -253,9 +264,16 @@
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(628, 355);
+            this.panel3.Size = new System.Drawing.Size(628, 347);
             this.panel3.TabIndex = 25;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel3_Paint);
+            // 
+            // treeView1
+            // 
+            this.treeView1.Location = new System.Drawing.Point(561, 243);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(121, 97);
+            this.treeView1.TabIndex = 27;
             // 
             // panel5
             // 
@@ -336,12 +354,11 @@
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 100);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 97.78394F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.216067F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(856, 361);
             this.tableLayoutPanel1.TabIndex = 27;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.TableLayoutPanel1_Paint);
             // 
             // panel2
             // 
@@ -357,14 +374,22 @@
             this.panel2.Controls.Add(this.bunifuTrackbar2);
             this.panel2.Controls.Add(this.bunifuTrackbar1);
             this.panel2.Controls.Add(this.label15);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(637, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(216, 355);
+            this.panel2.Size = new System.Drawing.Size(216, 347);
             this.panel2.TabIndex = 26;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(49, 205);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 27;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(35, 238);
+            this.button4.Location = new System.Drawing.Point(33, 243);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(147, 34);
             this.button4.TabIndex = 26;
@@ -541,7 +566,7 @@
             this.bunifuThinButton21.Size = new System.Drawing.Size(147, 39);
             this.bunifuThinButton21.TabIndex = 3;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton21.Click += new System.EventHandler(this.BunifuThinButton21_Click);
+            this.bunifuThinButton21.Click += new System.EventHandler(this.showFilterPanel);
             // 
             // earnButton
             // 
@@ -587,7 +612,7 @@
             this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
             this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton23.Location = new System.Drawing.Point(397, 57);
+            this.bunifuThinButton23.Location = new System.Drawing.Point(387, 57);
             this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton23.Name = "bunifuThinButton23";
             this.bunifuThinButton23.Size = new System.Drawing.Size(101, 40);
@@ -637,7 +662,7 @@
             this.bunifuThinButton25.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton25.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
             this.bunifuThinButton25.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton25.Location = new System.Drawing.Point(193, 63);
+            this.bunifuThinButton25.Location = new System.Drawing.Point(198, 64);
             this.bunifuThinButton25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuThinButton25.Name = "bunifuThinButton25";
             this.bunifuThinButton25.Size = new System.Drawing.Size(108, 27);
@@ -693,20 +718,6 @@
             this.bunifuThinButton27.Size = new System.Drawing.Size(81, 30);
             this.bunifuThinButton27.TabIndex = 33;
             this.bunifuThinButton27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(49, 205);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 27;
-            // 
-            // treeView1
-            // 
-            this.treeView1.Location = new System.Drawing.Point(561, 243);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(121, 97);
-            this.treeView1.TabIndex = 27;
             // 
             // Form1
             // 
@@ -790,6 +801,7 @@
         private ns1.BunifuThinButton2 bunifuThinButton27;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.Button button5;
     }
 }
 

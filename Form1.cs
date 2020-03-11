@@ -27,7 +27,7 @@ namespace Сайтец
         public Form1()
         {
             InitializeComponent();
-
+            showFilterPanel(null, null);
             login.Location = new Point(422,11);
             panel1.Controls.Add(login);
             money.Visible = false;
@@ -48,7 +48,8 @@ namespace Сайтец
                 bannerIndex = 0;
             }
 
-            AdminButton.Visible = (admin == 1);                
+            AdminButton.Visible = (admin == 1);
+            label7.Text = korzina.TotalPrice.ToString() + " р";
         }
 
         private void апнрапрToolStripMenuItem_Click(object sender, EventArgs e)
@@ -61,7 +62,6 @@ namespace Сайтец
 
         }
 
-        public static List<string> KuplennyeTovary;
         
         public static string CONNECTION_STRING =
             "SslMode=none;" +
@@ -173,7 +173,6 @@ namespace Сайтец
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            KuplennyeTovary = new List<string>();
             CONN = new MySqlConnection(CONNECTION_STRING);
             connect();
             Filterrr();
@@ -285,57 +284,29 @@ namespace Сайтец
         }
 
 
-        private void Panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label5_Click_1(object sender, EventArgs e)
-        {
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void AdminButton_Click(object sender, EventArgs e)
         {
              ButtonDesign D = new ButtonDesign();
              D.Show();
         }
 
-        private void BunifuTextbox1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void Panel2_Paint(object sender, PaintEventArgs e)
-        {
-        }
 
         private void Panel2_Click(object sender, EventArgs e)
         {
             Filterrr();
         }
 
-        private void BunifuThinButton21_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Покпазываем панель фильтра
+        /// </summary>
+        private void showFilterPanel(object sender, EventArgs e)
         {
             if (tableLayoutPanel1.ColumnStyles[1].Width != 0)
                 tableLayoutPanel1.ColumnStyles[1].Width = 0;
             else
-            tableLayoutPanel1.ColumnStyles[1].Width = 35;
-
+                tableLayoutPanel1.ColumnStyles[1].Width = 35;
         }
 
-        private void Label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void Button4_Click(object sender, EventArgs e)
         {
@@ -355,6 +326,11 @@ namespace Сайтец
         }
 
         private void Minprice_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }

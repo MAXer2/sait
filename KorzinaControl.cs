@@ -43,8 +43,6 @@ namespace Сайтец
             AmountLabel.Text = (shtuk + 1).ToString() + " шт";
             shtuk = shtuk + 1;
             PriceLabel.Text  = ( Convert.ToInt32(PriceTovara) * shtuk).ToString();
-            ((korzina)Parent.Parent).SummaLabel.Text = 
-                (((korzina)Parent.Parent).summa + Convert.ToInt32(PriceTovara)).ToString() + " р";
         }
 
         private void KorzinaControl_Load(object sender, EventArgs e)

@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tovar));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -42,42 +40,19 @@
             this.labelTovar = new System.Windows.Forms.Label();
             this.bunifuTileButton1 = new ns1.BunifuTileButton();
             this.bunifuTileButton2 = new ns1.BunifuTileButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(365, 85);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 73);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "899 Р";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(377, 70);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 24);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "1000 р";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(378, 260);
+            this.label3.Location = new System.Drawing.Point(387, 255);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 18);
@@ -97,10 +72,10 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
             this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(33, 109);
+            this.panel3.Location = new System.Drawing.Point(33, 87);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(221, 141);
+            this.panel3.Size = new System.Drawing.Size(271, 186);
             this.panel3.TabIndex = 8;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -111,7 +86,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(221, 126);
+            this.pictureBox1.Size = new System.Drawing.Size(271, 171);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -144,7 +119,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(378, 282);
+            this.label4.Location = new System.Drawing.Point(387, 277);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 18);
@@ -158,7 +133,7 @@
             this.richTextBox1.Enabled = false;
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.richTextBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.richTextBox1.Location = new System.Drawing.Point(28, 255);
+            this.richTextBox1.Location = new System.Drawing.Point(33, 277);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(346, 290);
@@ -171,12 +146,12 @@
             this.labelTovar.AutoSize = true;
             this.labelTovar.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelTovar.ForeColor = System.Drawing.Color.DimGray;
-            this.labelTovar.Location = new System.Drawing.Point(28, 53);
+            this.labelTovar.Location = new System.Drawing.Point(26, 43);
             this.labelTovar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTovar.Name = "labelTovar";
-            this.labelTovar.Size = new System.Drawing.Size(129, 42);
+            this.labelTovar.Size = new System.Drawing.Size(380, 42);
             this.labelTovar.TabIndex = 13;
-            this.labelTovar.Text = "Товар";
+            this.labelTovar.Text = "Textааапрарапраав";
             // 
             // bunifuTileButton1
             // 
@@ -191,10 +166,10 @@
             this.bunifuTileButton1.ImageZoom = 50;
             this.bunifuTileButton1.LabelPosition = 34;
             this.bunifuTileButton1.LabelText = "Купить сейчас";
-            this.bunifuTileButton1.Location = new System.Drawing.Point(375, 156);
+            this.bunifuTileButton1.Location = new System.Drawing.Point(384, 152);
             this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuTileButton1.Name = "bunifuTileButton1";
-            this.bunifuTileButton1.Size = new System.Drawing.Size(208, 43);
+            this.bunifuTileButton1.Size = new System.Drawing.Size(202, 42);
             this.bunifuTileButton1.TabIndex = 10;
             this.bunifuTileButton1.Click += new System.EventHandler(this.bunifuTileButton1_Click);
             // 
@@ -211,12 +186,37 @@
             this.bunifuTileButton2.ImageZoom = 50;
             this.bunifuTileButton2.LabelPosition = 29;
             this.bunifuTileButton2.LabelText = "Добавить в корзину";
-            this.bunifuTileButton2.Location = new System.Drawing.Point(375, 207);
+            this.bunifuTileButton2.Location = new System.Drawing.Point(384, 200);
             this.bunifuTileButton2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuTileButton2.Name = "bunifuTileButton2";
-            this.bunifuTileButton2.Size = new System.Drawing.Size(208, 39);
+            this.bunifuTileButton2.Size = new System.Drawing.Size(202, 39);
             this.bunifuTileButton2.TabIndex = 11;
             this.bunifuTileButton2.Click += new System.EventHandler(this.bunifuTileButton2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(415, 100);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(155, 55);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "899 Р";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.Location = new System.Drawing.Point(444, 76);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 24);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "1000 р";
             // 
             // tovar
             // 
@@ -249,9 +249,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
@@ -263,5 +260,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelTovar;
         public ns1.BunifuTileButton bunifuTileButton2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
