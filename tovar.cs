@@ -78,7 +78,14 @@ namespace Сайтец
 
         private void bunifuTileButton2_Click(object sender, EventArgs e)
         {
-            korzina.KuplennyeTovary.Add(ident);
+            if (!korzina.games.ContainsKey(ident))
+            {
+                korzina.games.Add(ident, 1);
+            } else
+            {
+                korzina.games[ident] = korzina.games[ident] + 1;
+            }
+
             korzina.TotalPrice = korzina.TotalPrice + price;
 
             MessageBox.Show("Добавлено");
@@ -95,14 +102,5 @@ namespace Сайтец
             
         }
 
-        private void Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void PictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

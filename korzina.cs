@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +17,8 @@ namespace Сайтец
         /// <summary>
         /// Reленные товары
         /// </summary>
-        public static List<string> KuplennyeTovary = new List<string>();
+       // public static List<string> KuplennyeTovary = new List<string>();
+        public static Dictionary<string, int> games = new Dictionary<string, int>();
         /// <summary>
         /// Общая стоимость
         /// </summary>
@@ -32,8 +34,10 @@ namespace Сайтец
         {
             int x = 10;
             int y = 10;
-            foreach (string id in korzina.KuplennyeTovary)
+           // foreach (string id in korzina.KuplennyeTovary)
+           foreach (KeyValuePair <string,int> MyGame in korzina.games )
             {
+               string id = MyGame.Key;
                 KorzinaControl Korzina = new KorzinaControl(id);
                 Korzina.Location = new Point(x, y);
                 Korzina.Size = new Size(680, 42);

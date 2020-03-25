@@ -53,9 +53,15 @@ namespace Сайтец
         private void label17_Click(object sender, EventArgs e)
         {
             int shtuk = Convert.ToInt32(AmountLabel.Text.Replace("шт", ""));
-            AmountLabel.Text = (shtuk - 1).ToString() + " шт";
+        //    AmountLabel.Text = korzina..Value.ToString() + " шт";
+       
             shtuk = shtuk - 1;
             PriceLabel.Text = (Convert.ToInt32(PriceTovara) / shtuk).ToString();
+        }
+
+        private void AmountLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

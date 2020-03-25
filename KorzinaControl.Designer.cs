@@ -70,7 +70,7 @@
             this.checkBox1.BackColor = System.Drawing.Color.Gainsboro;
             this.checkBox1.ForeColor = System.Drawing.Color.DimGray;
             this.checkBox1.Location = new System.Drawing.Point(53, 18);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(18, 17);
             this.checkBox1.TabIndex = 27;
@@ -87,6 +87,7 @@
             this.AmountLabel.Size = new System.Drawing.Size(64, 29);
             this.AmountLabel.TabIndex = 26;
             this.AmountLabel.Text = "1 шт";
+            this.AmountLabel.Click += new System.EventHandler(this.AmountLabel_Click);
             // 
             // PriceLabel
             // 
@@ -123,7 +124,7 @@
             this.Controls.Add(this.AmountLabel);
             this.Controls.Add(this.PriceLabel);
             this.Controls.Add(this.TovarName);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "KorzinaControl";
             this.Size = new System.Drawing.Size(907, 52);
             this.Load += new System.EventHandler(this.KorzinaControl_Load);
