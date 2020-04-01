@@ -12,13 +12,16 @@ namespace Сайтец
 {
     public partial class KorzinaControl : UserControl
     {
-       public string PriceTovara;
-        public KorzinaControl(string id, int value)
+        public string PriceTovara;
+        string id;
+
+        public KorzinaControl(string _id, int value)
         {
+            id = _id;
             InitializeComponent();
 
             List<string> infaOTovare = Form1.Select("SELECT Title, Price, Image FROM `Products`" +
-           " WHERE id = '" + id + "'");
+                " WHERE id = '" + id + "'");
 
             TovarName.Text = infaOTovare[0].ToString();
 
@@ -30,27 +33,24 @@ namespace Сайтец
 
         private void label13_Click(object sender, EventArgs e)
         {
-            /* int shtuk = Convert.ToInt32(AmountLabel.Text.Replace("шт", ""));
-             AmountLabel.Text = (shtuk + 1).ToString() + " шт";
-             shtuk = shtuk + 1;
-             PriceLabel.Text  = ( Convert.ToInt32(PriceTovara) * shtuk).ToString(); */
             int value = Convert.ToInt32(AmountLabel.Text.Replace("шт", ""));
             AmountLabel.Text = (value + 1).ToString() + " шт";
             value = value + 1;
             PriceLabel.Text = (Convert.ToInt32(PriceTovara) * value).ToString();
+
+            korzina.games[id] = value;
+            korzina.calculateKorzina();
         }
 
-
-        private void label17_Click(object sender, EventArgs e, int value)
+        private void label17_Click(object sender, EventArgs e)
         {
-           // int shtuk = Convert.ToInt32(AmountLabel.Text.Replace("шт", ""));
-        //    AmountLabel.Text = korzina..Value.ToString() + " шт";
-       
-          //  shtuk = shtuk - 1;
-            PriceLabel.Text = (Convert.ToInt32(PriceTovara) / value).ToString();
-
-            PriceTovara = (Convert.ToInt32(PriceTovara) / value).ToString();
+            int value = Convert.ToInt32(AmountLabel.Text.Replace("шт", ""));
+            AmountLabel.Text = (value - 1).ToString() + " шт";
+            value = value - 1;
+            PriceLabel.Text = (Convert.ToInt32(PriceTovara) * value).ToString();
+            
+            korzina.games[id] = value;
+            korzina.calculateKorzina();
         }
-
     }
 }

@@ -23,10 +23,39 @@ namespace Сайтец
         /// Общая стоимость
         /// </summary>
         public static int TotalPrice = 0;
+        /// <summary>
+        /// Общая стоимость
+        /// </summary>
+        public static int TotalCount = 0;
 
         public korzina()
         {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// Получение цены
+        /// </summary>
+        public static int GetPrice(string id)
+        {
+            List<string> infaOTovare = Form1.Select("SELECT Price FROM `Products`" +
+                " WHERE id = '" + id + "'");
+
+            return Convert.ToInt32(infaOTovare[0]);
+        }
+
+        /// <summary>
+        /// Стоимость товаров в корзине итоговая
+        /// </summary>
+        public static void calculateKorzina()
+        {
+            TotalCount = 0;
+            TotalPrice = 0;
+            foreach (KeyValuePair<string, int> MyGame in korzina.games)
+            {
+                TotalCount = TotalCount + MyGame.Value;
+                TotalPrice = TotalPrice + MyGame.Value * GetPrice(MyGame.Key);
+            }
         }
 
 
@@ -34,15 +63,14 @@ namespace Сайтец
         {
             int x = 10;
             int y = 10;
-           // foreach (string id in korzina.KuplennyeTovary)
-           foreach (KeyValuePair <string,int> MyGame in korzina.games )
+           
+            foreach (KeyValuePair <string,int> MyGame in korzina.games)
             {
-               string id = MyGame.Key;
+                string id = MyGame.Key;
                
                 KorzinaControl Korzina = new KorzinaControl(id, MyGame.Value);
                 Korzina.Location = new Point(x, y);
                 Korzina.Size = new Size(680, 42);
-                //korzina.TotalPri
 
                 panel3.Controls.Add(Korzina);
                 y = y + 50;
@@ -64,6 +92,17 @@ namespace Сайтец
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            calculateKorzina();
+            SummaLabel.Text = TotalPrice.ToString() + " Р";
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(korzina));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             this.bunifuTileButton2 = new ns1.BunifuTileButton();
             this.SummaLabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -200,6 +202,12 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(664, 173);
             this.panel3.TabIndex = 31;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // korzina
             // 
@@ -242,5 +250,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Label SummaLabel;
+        private System.Windows.Forms.Timer timer1;
     }
 }
