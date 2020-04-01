@@ -12,8 +12,8 @@ namespace Сайтец
 {
     public partial class KorzinaControl : UserControl
     {
-        string PriceTovara;
-        public KorzinaControl(string id)
+       public string PriceTovara;
+        public KorzinaControl(string id, int value)
         {
             InitializeComponent();
 
@@ -24,44 +24,33 @@ namespace Сайтец
 
             PriceLabel.Text = infaOTovare[1].ToString();
             PriceTovara = infaOTovare[1].ToString();
+            AmountLabel.Text = value.ToString() + " шт";
             //1
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TovarName_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void label13_Click(object sender, EventArgs e)
         {
-            int shtuk = Convert.ToInt32(AmountLabel.Text.Replace("шт", ""));
-            AmountLabel.Text = (shtuk + 1).ToString() + " шт";
-            shtuk = shtuk + 1;
-            PriceLabel.Text  = ( Convert.ToInt32(PriceTovara) * shtuk).ToString();
+            /* int shtuk = Convert.ToInt32(AmountLabel.Text.Replace("шт", ""));
+             AmountLabel.Text = (shtuk + 1).ToString() + " шт";
+             shtuk = shtuk + 1;
+             PriceLabel.Text  = ( Convert.ToInt32(PriceTovara) * shtuk).ToString(); */
+            int value = Convert.ToInt32(AmountLabel.Text.Replace("шт", ""));
+            AmountLabel.Text = (value + 1).ToString() + " шт";
+            value = value + 1;
+            PriceLabel.Text = (Convert.ToInt32(PriceTovara) * value).ToString();
         }
 
-        private void KorzinaControl_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label17_Click(object sender, EventArgs e)
+        private void label17_Click(object sender, EventArgs e, int value)
         {
-            int shtuk = Convert.ToInt32(AmountLabel.Text.Replace("шт", ""));
+           // int shtuk = Convert.ToInt32(AmountLabel.Text.Replace("шт", ""));
         //    AmountLabel.Text = korzina..Value.ToString() + " шт";
        
-            shtuk = shtuk - 1;
-            PriceLabel.Text = (Convert.ToInt32(PriceTovara) / shtuk).ToString();
+          //  shtuk = shtuk - 1;
+            PriceLabel.Text = (Convert.ToInt32(PriceTovara) / value).ToString();
+
+            PriceTovara = (Convert.ToInt32(PriceTovara) / value).ToString();
         }
 
-        private void AmountLabel_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

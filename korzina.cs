@@ -38,10 +38,11 @@ namespace Сайтец
            foreach (KeyValuePair <string,int> MyGame in korzina.games )
             {
                string id = MyGame.Key;
-                KorzinaControl Korzina = new KorzinaControl(id);
+               
+                KorzinaControl Korzina = new KorzinaControl(id, MyGame.Value);
                 Korzina.Location = new Point(x, y);
                 Korzina.Size = new Size(680, 42);
-                korzina.TotalPrice = korzina.TotalPrice + Convert.ToInt32(Korzina.PriceLabel.Text.Replace("р", ""));
+                //korzina.TotalPri
 
                 panel3.Controls.Add(Korzina);
                 y = y + 50;

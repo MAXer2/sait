@@ -48,7 +48,6 @@
             this.label17.Size = new System.Drawing.Size(19, 25);
             this.label17.TabIndex = 29;
             this.label17.Text = "-";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label13
             // 
@@ -87,7 +86,6 @@
             this.AmountLabel.Size = new System.Drawing.Size(64, 29);
             this.AmountLabel.TabIndex = 26;
             this.AmountLabel.Text = "1 шт";
-            this.AmountLabel.Click += new System.EventHandler(this.AmountLabel_Click);
             // 
             // PriceLabel
             // 
@@ -112,7 +110,6 @@
             this.TovarName.Size = new System.Drawing.Size(262, 36);
             this.TovarName.TabIndex = 24;
             this.TovarName.Text = "Название товара";
-            this.TovarName.Click += new System.EventHandler(this.TovarName_Click);
             // 
             // KorzinaControl
             // 
@@ -127,7 +124,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "KorzinaControl";
             this.Size = new System.Drawing.Size(907, 52);
-            this.Load += new System.EventHandler(this.KorzinaControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

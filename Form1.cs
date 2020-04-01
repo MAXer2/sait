@@ -51,16 +51,7 @@ namespace Сайтец
             AdminButton.Visible = (admin == 1);
             label7.Text = korzina.TotalPrice.ToString() + " р";
         }
-
-        private void апнрапрToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
+        
 
         
         public static string CONNECTION_STRING =
@@ -178,15 +169,6 @@ namespace Сайтец
             Filterrr();
         }
 
-        private void bannerPictureBox_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private Point MouseHook;
         private void Form1_MouseMove(object sender, MouseEventArgs e)
@@ -212,15 +194,6 @@ namespace Сайтец
             label1.ForeColor = Color.FromArgb(93, 110, 134);
         }
 
-        private void bunifuTextbox1_OnTextChange(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuCards1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
@@ -228,19 +201,11 @@ namespace Сайтец
             f.ShowDialog();
         }
 
-        private void Form1_Scroll(object sender, ScrollEventArgs e)
-        {
-        }
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
             LoginForm l = new LoginForm();
             l.ShowDialog();
-        }
-
-        private void panel9_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
 
@@ -325,14 +290,5 @@ namespace Сайтец
             minnPrice = Convert.ToInt32(minprice.Text);
         }
 
-        private void Minprice_OnValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
