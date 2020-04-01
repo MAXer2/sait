@@ -50,6 +50,7 @@ namespace Сайтец
 
             AdminButton.Visible = (admin == 1);
             label7.Text = korzina.TotalPrice.ToString() + " р";
+            label5.Text = korzina.TotalCount.ToString() + " шт";
         }
         
 
@@ -61,8 +62,8 @@ namespace Сайтец
             "port=3306;" +
             "uid=ingenerka;" +
             "pwd=Beavis1989;" +
-            "old guids=true;";
-        /*"SslMode=none;" +
+            "old guids=true;";/*
+        "SslMode=none;" +
             "Server=localhost;" +
             "database=ingenerka;" +
             "port=3306;" +
@@ -290,5 +291,9 @@ namespace Сайтец
             minnPrice = Convert.ToInt32(minprice.Text);
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

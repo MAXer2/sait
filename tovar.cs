@@ -87,6 +87,7 @@ namespace Сайтец
             }
 
             korzina.TotalPrice = korzina.TotalPrice + price;
+            korzina.TotalCount = korzina.TotalCount + 1;
 
             MessageBox.Show("Добавлено");
 
