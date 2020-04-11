@@ -24,12 +24,42 @@ namespace Сайтец
         /// </summary>
         public static int TotalPrice = 0;
 
+        /// <summary>
+        /// Общее кол-во
+        /// </summary>
+        public static int TotalCount = 0;
+
         public korzina()
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// получение цены
+        /// </summary>
+        public static int GetPrice(string id)
+            {
+
+            List<string> infaOTovare = Form1.Select("SELECT Price FROM `Products`" +
+           " WHERE id = '" + id + "'");
+            return Convert.ToInt32(infaOTovare[0]);
+        }
+
+        /// <summary>
+        /// стоимость товаров в корзине
+        /// </summary>
+        public static void calulateKorzina()
+        {
+            TotalCount = 0;
+            TotalPrice = 0;
+            foreach (KeyValuePair <string, int> MyGame in korzina.games)
+            {
+                TotalCount = TotalCount + MyGame.Value;
+                TotalPrice = TotalPrice + MyGame.Value * GetPrice(MyGame.Key);
+            }
 
 
+
+        }
         private void korzina_Load(object sender, EventArgs e)
         {
             int x = 10;
@@ -50,6 +80,14 @@ namespace Сайтец
 
             SummaLabel.Text = korzina.TotalPrice.ToString() + " р";
         }
+        public static void calculateKorzina ()
+        {
+            foreach (KeyValuePair <string, int> MyGame in korzina.games)
+            {
+
+            }
+
+        }
 
         private void bunifuTileButton1_Click(object sender, EventArgs e)
         {
@@ -64,6 +102,13 @@ namespace Сайтец
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+       
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            calculateKorzina();
+            SummaLabel.Text = TotalPrice.ToString() + " Р";
         }
     }
 }

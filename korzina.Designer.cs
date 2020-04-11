@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(korzina));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             this.bunifuTileButton2 = new ns1.BunifuTileButton();
             this.SummaLabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,7 +97,7 @@
             this.label10.ForeColor = System.Drawing.Color.DimGray;
             this.label10.Location = new System.Drawing.Point(480, 269);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(143, 29);
+            this.label10.Size = new System.Drawing.Size(185, 36);
             this.label10.TabIndex = 10;
             this.label10.Text = "__________";
             // 
@@ -106,7 +108,7 @@
             this.label11.ForeColor = System.Drawing.Color.DimGray;
             this.label11.Location = new System.Drawing.Point(475, 303);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(87, 25);
+            this.label11.Size = new System.Drawing.Size(108, 31);
             this.label11.TabIndex = 11;
             this.label11.Text = "Итого : ";
             // 
@@ -117,7 +119,7 @@
             this.label14.ForeColor = System.Drawing.Color.DarkGray;
             this.label14.Location = new System.Drawing.Point(67, 47);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(50, 18);
+            this.label14.Size = new System.Drawing.Size(65, 24);
             this.label14.TabIndex = 20;
             this.label14.Text = "Товар";
             // 
@@ -128,7 +130,7 @@
             this.label15.ForeColor = System.Drawing.Color.DarkGray;
             this.label15.Location = new System.Drawing.Point(299, 47);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(92, 18);
+            this.label15.Size = new System.Drawing.Size(117, 24);
             this.label15.TabIndex = 21;
             this.label15.Text = "Количество";
             // 
@@ -139,7 +141,7 @@
             this.label16.ForeColor = System.Drawing.Color.DarkGray;
             this.label16.Location = new System.Drawing.Point(599, 47);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(56, 18);
+            this.label16.Size = new System.Drawing.Size(68, 24);
             this.label16.TabIndex = 22;
             this.label16.Text = "Сумма";
             // 
@@ -201,6 +203,10 @@
             this.panel3.Size = new System.Drawing.Size(664, 173);
             this.panel3.TabIndex = 31;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // korzina
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -242,5 +248,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Label SummaLabel;
+        private System.Windows.Forms.Timer timer1;
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Сайтец.Admin;
 
 namespace Сайтец
 {
@@ -290,5 +291,14 @@ namespace Сайтец
             minnPrice = Convert.ToInt32(minprice.Text);
         }
 
+        private void изменитьДизайнToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ContextMenuStrip c1 = (ContextMenuStrip)((ToolStripMenuItem)sender).Owner;
+            ns1.BunifuThinButton2 btn = (ns1.BunifuThinButton2)(c1.SourceControl);
+
+
+            OneButtonForm form = new OneButtonForm(btn);
+            form.ShowDialog();
+        }
     }
 }
