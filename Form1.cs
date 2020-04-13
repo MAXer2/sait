@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 using Сайтец.Admin;
+using MySql.Data.MySqlClient;
 
 namespace Сайтец
 {
@@ -57,18 +57,11 @@ namespace Сайтец
         
         public static string CONNECTION_STRING =
             "SslMode=none;" +
-            "Server=db4free.net;" +
-            "database=ingenerka;" +
-            "port=3306;" +
-            "uid=ingenerka;" +
-            "pwd=Beavis1989;" +
-            "old guids=true;";
-        /*"SslMode=none;" +
             "Server=localhost;" +
             "database=ingenerka;" +
             "port=3306;" +
             "uid=root;" +
-            "old guids=true;";*/
+            "old guids=true;";
 
         public static MySqlConnection CONN;
 
@@ -291,11 +284,15 @@ namespace Сайтец
             minnPrice = Convert.ToInt32(minprice.Text);
         }
 
-        private void изменитьДизайнToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void поменятьДизайнToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ContextMenuStrip c1 = (ContextMenuStrip)((ToolStripMenuItem)sender).Owner;
             ns1.BunifuThinButton2 btn = (ns1.BunifuThinButton2)(c1.SourceControl);
-
 
             OneButtonForm form = new OneButtonForm(btn);
             form.ShowDialog();
