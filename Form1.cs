@@ -17,7 +17,7 @@ namespace Сайтец
         public static int maxPrice;
         public static int minnPrice;
         public static bool successLogin = false;
-     
+
         public static int admin = 0;
         public static moneyControl money = new moneyControl();
         public static LoginControl1 login = new LoginControl1();
@@ -29,7 +29,7 @@ namespace Сайтец
         {
             InitializeComponent();
             showFilterPanel(null, null);
-            login.Location = new Point(422,11);
+            login.Location = new Point(422, 11);
             panel1.Controls.Add(login);
             money.Visible = false;
             money.Location = new Point(500, 14);
@@ -38,7 +38,7 @@ namespace Сайтец
             banners.Add(Properties.Resources.banner1);
             banners.Add(Properties.Resources.banner2);
             banners.Add(Properties.Resources.banner3);
-       
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -50,17 +50,27 @@ namespace Сайтец
             }
 
             AdminButton.Visible = (admin == 1);
+            ModerButton.Visible = (admin == 1);
+            if (admin == 1)
+            {
+                AdminButton.ContextMenuStrip = buttonContextMenuStrip;
+            }
+            else
+            {
+                AdminButton.ContextMenuStrip = null;
+            }
             label7.Text = korzina.TotalPrice.ToString() + " р";
         }
-        
 
-        
+
+
         public static string CONNECTION_STRING =
             "SslMode=none;" +
-            "Server=localhost;" +
+            "Server=db4free.net;" +
             "database=ingenerka;" +
             "port=3306;" +
-            "uid=root;" +
+            "uid=ingenerka;" +
+            "pwd=Beavis1989;" +
             "old guids=true;";
 
         public static MySqlConnection CONN;
@@ -113,17 +123,21 @@ namespace Сайтец
             }
         }
 
-
+        bool skidka = false;
         public void Filterrr()
-        { 
+        {
             String zapros = "SELECT id FROM Products WHERE 1=1";
             if (minprice.Text != "")
                 zapros += " AND price >= " + Convert.ToInt32(minprice.Text);
             if (maxpricebutton.Text != "")
                 zapros += " AND price <=" + Convert.ToInt32(maxpricebutton.Text);
-
-            if (textBox1.Text != "")
-                zapros += " AND upper(Title) like upper ('"+ textBox1.Text + "%')";
+            if (skidka == true)
+            {
+                zapros += " AND price >= OldPrice ";
+               
+            }
+            /* if (textBox1.Text != "")
+                 zapros += " AND upper(Title) like upper ('"+ textBox1.Text + "%')";*/
 
             List<string> products = Select(zapros);
             panel3.Controls.Clear();
@@ -153,7 +167,7 @@ namespace Сайтец
             panel4.Visible = false;
             panel5.Visible = false;
             label1.ForeColor = Color.FromArgb(93, 110, 134);
-           
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -161,6 +175,34 @@ namespace Сайтец
             CONN = new MySqlConnection(CONNECTION_STRING);
             connect();
             Filterrr();
+            foreach (Control ctrl in Controls)
+            {
+                if (ctrl is ns1.BunifuThinButton2)
+                {
+                    string btn = ctrl.Name;
+                    string type = ctrl.GetType().ToString();
+                    string form = this.Name;
+
+                    List<string> fontSize = Select(
+                        "SELECT Value FROM UniqueDesign " +
+                        "WHERE ObjectName = '" + btn + "'" +
+                        //And FOrm = And objectType=...
+                        " AND Parameter = 'FontSize'");
+
+                    List<string> fontName = Select(
+                        "SELECT Value FROM UniqueDesign " +
+                        "WHERE ObjectName = '" + btn + "'" +
+                        //And FOrm = And objectType=...
+                        " AND Parameter = 'FontName'");
+
+                    if (fontName.Count > 0 && fontSize.Count > 0)
+                    {
+                        ctrl.Font = new Font(fontName[0],
+                            (float)Convert.ToDouble(fontSize[0]));
+                        //ctrl.BackgroundImage = Image.FromFile(fontSize[0]);
+                    }
+                }
+            }
         }
 
 
@@ -180,7 +222,7 @@ namespace Сайтец
 
         private void label1_Click(object sender, EventArgs e)
         {
-            panel3.Visible= true;
+            panel3.Visible = true;
             panel4.Visible = false;
             label6.ForeColor = Color.FromArgb(73, 90, 114);
             label2.ForeColor = Color.FromArgb(73, 90, 114);
@@ -205,8 +247,8 @@ namespace Сайтец
 
         private void earn_Click(object sender, EventArgs e)
         {
-            earn e1 = new earn ();
-            e1.ShowDialog ();
+            earn e1 = new earn();
+            e1.ShowDialog();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -223,30 +265,30 @@ namespace Сайтец
             label2.ForeColor = Color.FromArgb(93, 110, 134);
             panel5.Visible = false;
             panel3.Visible = false;
-            panel4.Visible =  true;
+            panel4.Visible = true;
         }
 
         private void Label3_Click(object sender, EventArgs e)
         {
-            UserControl2 loading = new UserControl2 ();
+            UserControl2 loading = new UserControl2();
             loading.Location = new Point(233, 33);
             loading.Size = new Size(152, 21);
             Controls.Add(loading);
-           
+
             label6.ForeColor = Color.FromArgb(73, 90, 114);
             label2.ForeColor = Color.FromArgb(73, 90, 114);
             label1.ForeColor = Color.FromArgb(73, 90, 114);
             label3.ForeColor = Color.FromArgb(93, 110, 134);
             panel5.Visible = true;
-            panel4.Visible =false;
+            panel4.Visible = false;
             panel3.Visible = false;
         }
 
 
         private void AdminButton_Click(object sender, EventArgs e)
         {
-             ButtonDesign D = new ButtonDesign();
-             D.Show();
+            ButtonDesign D = new ButtonDesign();
+            D.Show();
         }
 
 
@@ -296,6 +338,42 @@ namespace Сайтец
 
             OneButtonForm form = new OneButtonForm(btn);
             form.ShowDialog();
+        }
+
+        private void buttonContextMenuStrip_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            ModeratorForm r = new ModeratorForm();
+            r.Show();
+        }
+
+        private void bunifuCheckbox1_OnChange(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuCheckbox2_OnChange(object sender, EventArgs e)
+        {
+          
+            if (bunifuCheckbox2.Checked)
+            {
+                skidka = false;
+                bunifuCheckbox2.Checked = false;
+            } else
+            {
+                skidka = true;
+
+                bunifuCheckbox2.Checked = true;
+            }
         }
     }
 }
