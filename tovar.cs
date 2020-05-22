@@ -18,6 +18,11 @@ namespace Сайтец
         public tovar(string id)
         {
             InitializeComponent();
+
+            label1.ReadOnly = (Form1.admin == 0);
+            label1.Enabled = (Form1.admin == 1);
+            bunifuTileButton3.Visible = (Form1.admin == 1);
+
             ident = id;
             List<string> infaOTovare = Form1.Select("SELECT Title, Price, Image FROM `Products`" +
                 " WHERE id = '" + id + "'");
@@ -102,5 +107,14 @@ namespace Сайтец
             
         }
 
+        private void bunifuTileButton3_Click(object sender, EventArgs e)
+        {
+            Form1.Update("UPDATE `Products`" +
+               " SET title = '" + labelTovar.Text + "'" +
+               ", price = " + label1.Text.Replace("Р", "") +
+               " WHERE id = '" + ident + "'");
+      
+
+        }
     }
 }
