@@ -93,6 +93,7 @@ namespace Сайтец
 
             korzina.TotalPrice = korzina.TotalPrice + price;
 
+            korzina.TotalCount = korzina.TotalCount + 1;
             MessageBox.Show("Добавлено");
 
             /*for (int i = 0; i < Form1.KuplennyeTovary.Count; i++)

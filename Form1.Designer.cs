@@ -41,19 +41,11 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.buttonContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.поменятьДизайнToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bunifuTextbox1 = new ns1.BunifuTextbox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.treeView1 = new System.Windows.Forms.TreeView();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
@@ -69,7 +61,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.bunifuThinButton27 = new ns1.BunifuThinButton2();
             this.bunifuThinButton26 = new ns1.BunifuThinButton2();
-            this.bunifuThinButton25 = new ns1.BunifuThinButton2();
             this.bunifuThinButton24 = new ns1.BunifuThinButton2();
             this.bunifuThinButton23 = new ns1.BunifuThinButton2();
             this.earnButton = new ns1.BunifuThinButton2();
@@ -78,8 +69,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.buttonContextMenuStrip.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -106,7 +95,6 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.bunifuTextbox1);
             this.panel1.Location = new System.Drawing.Point(-1, -14);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
@@ -120,7 +108,7 @@
             this.ModerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(80)))), ((int)(((byte)(104)))));
             this.ModerButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ModerButton.BorderRadius = 0;
-            this.ModerButton.ButtonText = "ДОБАВИТЬ ТОВАР";
+            this.ModerButton.ButtonText = "Добавить товар";
             this.ModerButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ModerButton.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
             this.ModerButton.Iconcolor = System.Drawing.Color.Transparent;
@@ -135,7 +123,7 @@
             this.ModerButton.IconVisible = true;
             this.ModerButton.IconZoom = 90D;
             this.ModerButton.IsTab = false;
-            this.ModerButton.Location = new System.Drawing.Point(441, 16);
+            this.ModerButton.Location = new System.Drawing.Point(102, 17);
             this.ModerButton.Margin = new System.Windows.Forms.Padding(5);
             this.ModerButton.Name = "ModerButton";
             this.ModerButton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(80)))), ((int)(((byte)(104)))));
@@ -144,10 +132,10 @@
             this.ModerButton.selected = false;
             this.ModerButton.Size = new System.Drawing.Size(174, 57);
             this.ModerButton.TabIndex = 32;
-            this.ModerButton.Text = "ДОБАВИТЬ ТОВАР";
+            this.ModerButton.Text = "Добавить товар";
             this.ModerButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ModerButton.Textcolor = System.Drawing.Color.White;
-            this.ModerButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModerButton.TextFont = new System.Drawing.Font("Montserrat SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ModerButton.Visible = false;
             this.ModerButton.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
@@ -168,10 +156,11 @@
             // AdminButton
             // 
             this.AdminButton.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
+            this.AdminButton.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.AdminButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(80)))), ((int)(((byte)(104)))));
             this.AdminButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AdminButton.BorderRadius = 0;
-            this.AdminButton.ButtonText = "ВОЙТИ В АДМИНКУ";
+            this.AdminButton.ButtonText = "Админ-панель";
             this.AdminButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AdminButton.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
             this.AdminButton.Iconcolor = System.Drawing.Color.Transparent;
@@ -186,43 +175,43 @@
             this.AdminButton.IconVisible = true;
             this.AdminButton.IconZoom = 90D;
             this.AdminButton.IsTab = false;
-            this.AdminButton.Location = new System.Drawing.Point(625, 17);
+            this.AdminButton.Location = new System.Drawing.Point(302, 17);
             this.AdminButton.Margin = new System.Windows.Forms.Padding(5);
             this.AdminButton.Name = "AdminButton";
             this.AdminButton.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(80)))), ((int)(((byte)(104)))));
             this.AdminButton.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
             this.AdminButton.OnHoverTextColor = System.Drawing.Color.White;
             this.AdminButton.selected = false;
-            this.AdminButton.Size = new System.Drawing.Size(213, 57);
+            this.AdminButton.Size = new System.Drawing.Size(201, 57);
             this.AdminButton.TabIndex = 20;
-            this.AdminButton.Text = "ВОЙТИ В АДМИНКУ";
+            this.AdminButton.Text = "Админ-панель";
             this.AdminButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.AdminButton.Textcolor = System.Drawing.Color.White;
-            this.AdminButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminButton.TextFont = new System.Drawing.Font("Montserrat SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AdminButton.Visible = false;
             this.AdminButton.Click += new System.EventHandler(this.AdminButton_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Font = new System.Drawing.Font("Montserrat SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(983, 43);
+            this.label7.Location = new System.Drawing.Point(982, 44);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 20);
+            this.label7.Size = new System.Drawing.Size(98, 24);
             this.label7.TabIndex = 19;
             this.label7.Text = " 0 рублей";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Font = new System.Drawing.Font("Montserrat SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(987, 25);
+            this.label5.Location = new System.Drawing.Point(988, 22);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 20);
+            this.label5.Size = new System.Drawing.Size(101, 24);
             this.label5.TabIndex = 18;
             this.label5.Text = "0 товаров";
             // 
@@ -231,7 +220,7 @@
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox3.ContextMenuStrip = this.buttonContextMenuStrip;
-            this.pictureBox3.Location = new System.Drawing.Point(1088, 16);
+            this.pictureBox3.Location = new System.Drawing.Point(1114, 20);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(71, 57);
@@ -254,22 +243,6 @@
             this.поменятьДизайнToolStripMenuItem.Size = new System.Drawing.Size(202, 24);
             this.поменятьДизайнToolStripMenuItem.Text = "Поменять дизайн";
             this.поменятьДизайнToolStripMenuItem.Click += new System.EventHandler(this.поменятьДизайнToolStripMenuItem_Click);
-            // 
-            // bunifuTextbox1
-            // 
-            this.bunifuTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
-            this.bunifuTextbox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox1.BackgroundImage")));
-            this.bunifuTextbox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.bunifuTextbox1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuTextbox1.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox1.Icon")));
-            this.bunifuTextbox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.bunifuTextbox1.Location = new System.Drawing.Point(56, 16);
-            this.bunifuTextbox1.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuTextbox1.Name = "bunifuTextbox1";
-            this.bunifuTextbox1.Size = new System.Drawing.Size(353, 60);
-            this.bunifuTextbox1.TabIndex = 0;
-            this.bunifuTextbox1.text = "Поиск";
-            this.bunifuTextbox1.Visible = false;
             // 
             // label1
             // 
@@ -326,99 +299,12 @@
             // panel3
             // 
             this.panel3.AutoScroll = true;
-            this.panel3.Controls.Add(this.treeView1);
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(4, 4);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(837, 426);
             this.panel3.TabIndex = 25;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // treeView1
-            // 
-            this.treeView1.Location = new System.Drawing.Point(748, 299);
-            this.treeView1.Margin = new System.Windows.Forms.Padding(4);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(160, 118);
-            this.treeView1.TabIndex = 27;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
-            this.panel5.Controls.Add(this.button3);
-            this.panel5.Controls.Add(this.button2);
-            this.panel5.Controls.Add(this.label13);
-            this.panel5.Controls.Add(this.button1);
-            this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
-            this.panel5.Location = new System.Drawing.Point(0, 18);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(559, 150);
-            this.panel5.TabIndex = 26;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(492, 22);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(165, 153);
-            this.button3.TabIndex = 3;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(349, 21);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(176, 153);
-            this.button2.TabIndex = 2;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(457, 166);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(247, 69);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "СКОРО";
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(633, 21);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 153);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
-            this.label3.Location = new System.Drawing.Point(615, 156);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 29);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Скидки";
-            this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -673,31 +559,6 @@
             this.bunifuThinButton26.TabIndex = 32;
             this.bunifuThinButton26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuThinButton25
-            // 
-            this.bunifuThinButton25.ActiveBorderThickness = 1;
-            this.bunifuThinButton25.ActiveCornerRadius = 20;
-            this.bunifuThinButton25.ActiveFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton25.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton25.ActiveLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton25.BackColor = System.Drawing.Color.White;
-            this.bunifuThinButton25.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton25.BackgroundImage")));
-            this.bunifuThinButton25.ButtonText = "Топ продаж";
-            this.bunifuThinButton25.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton25.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
-            this.bunifuThinButton25.IdleBorderThickness = 1;
-            this.bunifuThinButton25.IdleCornerRadius = 20;
-            this.bunifuThinButton25.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton25.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
-            this.bunifuThinButton25.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton25.Location = new System.Drawing.Point(264, 79);
-            this.bunifuThinButton25.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.bunifuThinButton25.Name = "bunifuThinButton25";
-            this.bunifuThinButton25.Size = new System.Drawing.Size(144, 33);
-            this.bunifuThinButton25.TabIndex = 31;
-            this.bunifuThinButton25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // bunifuThinButton24
             // 
             this.bunifuThinButton24.ActiveBorderThickness = 1;
@@ -716,7 +577,7 @@
             this.bunifuThinButton24.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton24.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
             this.bunifuThinButton24.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton24.Location = new System.Drawing.Point(411, 70);
+            this.bunifuThinButton24.Location = new System.Drawing.Point(270, 68);
             this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.bunifuThinButton24.Name = "bunifuThinButton24";
             this.bunifuThinButton24.Size = new System.Drawing.Size(107, 49);
@@ -741,7 +602,7 @@
             this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
             this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton23.Location = new System.Drawing.Point(516, 70);
+            this.bunifuThinButton23.Location = new System.Drawing.Point(391, 69);
             this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.bunifuThinButton23.Name = "bunifuThinButton23";
             this.bunifuThinButton23.Size = new System.Drawing.Size(135, 49);
@@ -766,7 +627,7 @@
             this.earnButton.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
             this.earnButton.IdleForecolor = System.Drawing.Color.White;
             this.earnButton.IdleLineColor = System.Drawing.Color.White;
-            this.earnButton.Location = new System.Drawing.Point(672, 70);
+            this.earnButton.Location = new System.Drawing.Point(662, 69);
             this.earnButton.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.earnButton.Name = "earnButton";
             this.earnButton.Size = new System.Drawing.Size(180, 49);
@@ -793,10 +654,10 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(90)))), ((int)(((byte)(114)))));
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.White;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(909, 70);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(865, 70);
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(196, 48);
+            this.bunifuThinButton21.Size = new System.Drawing.Size(292, 48);
             this.bunifuThinButton21.TabIndex = 3;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton21.Click += new System.EventHandler(this.showFilterPanel);
@@ -809,7 +670,6 @@
             this.ClientSize = new System.Drawing.Size(1173, 582);
             this.Controls.Add(this.bunifuThinButton27);
             this.Controls.Add(this.bunifuThinButton26);
-            this.Controls.Add(this.bunifuThinButton25);
             this.Controls.Add(this.bunifuThinButton24);
             this.Controls.Add(this.bunifuThinButton23);
             this.Controls.Add(this.earnButton);
@@ -830,10 +690,6 @@
             this.buttonContextMenuStrip.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -849,15 +705,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
-        private ns1.BunifuTextbox bunifuTextbox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         public System.Windows.Forms.Label label5;
         public ns1.BunifuFlatButton AdminButton;
         private ns1.BunifuThinButton2 bunifuThinButton21;
@@ -875,14 +725,11 @@
         private ns1.BunifuTrackbar bunifuTrackbar2;
         private ns1.BunifuTrackbar bunifuTrackbar1;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label3;
         private ns1.BunifuThinButton2 earnButton;
         private ns1.BunifuThinButton2 bunifuThinButton23;
         private ns1.BunifuThinButton2 bunifuThinButton24;
-        private ns1.BunifuThinButton2 bunifuThinButton25;
         private ns1.BunifuThinButton2 bunifuThinButton26;
         private ns1.BunifuThinButton2 bunifuThinButton27;
-        private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ContextMenuStrip buttonContextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem поменятьДизайнToolStripMenuItem;

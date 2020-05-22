@@ -60,6 +60,7 @@ namespace Сайтец
                 AdminButton.ContextMenuStrip = null;
             }
             label7.Text = korzina.TotalPrice.ToString() + " р";
+            label5.Text = korzina.TotalCount.ToString() + " товаров";
         }
 
 
@@ -165,7 +166,6 @@ namespace Сайтец
 
             panel3.Visible = true;
             panel4.Visible = false;
-            panel5.Visible = false;
             label1.ForeColor = Color.FromArgb(93, 110, 134);
 
         }
@@ -226,7 +226,7 @@ namespace Сайтец
             panel4.Visible = false;
             label6.ForeColor = Color.FromArgb(73, 90, 114);
             label2.ForeColor = Color.FromArgb(73, 90, 114);
-            label3.ForeColor = Color.FromArgb(73, 90, 114);
+           
             label1.ForeColor = Color.FromArgb(93, 110, 134);
         }
 
@@ -260,10 +260,10 @@ namespace Сайтец
         private void Label2_Click(object sender, EventArgs e)
         {
             label6.ForeColor = Color.FromArgb(73, 90, 114);
-            label3.ForeColor = Color.FromArgb(73, 90, 114);
+ 
             label1.ForeColor = Color.FromArgb(73, 90, 114);
             label2.ForeColor = Color.FromArgb(93, 110, 134);
-            panel5.Visible = false;
+         
             panel3.Visible = false;
             panel4.Visible = true;
         }
@@ -278,8 +278,6 @@ namespace Сайтец
             label6.ForeColor = Color.FromArgb(73, 90, 114);
             label2.ForeColor = Color.FromArgb(73, 90, 114);
             label1.ForeColor = Color.FromArgb(73, 90, 114);
-            label3.ForeColor = Color.FromArgb(93, 110, 134);
-            panel5.Visible = true;
             panel4.Visible = false;
             panel3.Visible = false;
         }

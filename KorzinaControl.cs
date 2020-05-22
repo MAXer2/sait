@@ -12,6 +12,8 @@ namespace Сайтец
 {
     public partial class KorzinaControl : UserControl
     {
+
+        
        public string PriceTovara;
         public string id;
         public KorzinaControl(string _id, int value)
@@ -35,7 +37,8 @@ namespace Сайтец
             value = value + 1;
             PriceLabel.Text = (Convert.ToInt32(PriceTovara) * value).ToString();
             korzina.games[id] = value;
-
+            korzina.TotalCount += 1;
+            korzina.TotalPrice += Convert.ToInt32(PriceTovara);
         }
 
 
@@ -48,6 +51,13 @@ namespace Сайтец
             value = value - 1;
             PriceLabel.Text = (Convert.ToInt32(PriceTovara) * value).ToString();
             korzina.games[id] = value;
+            korzina.TotalCount -= 1;
+            korzina.TotalPrice -= Convert.ToInt32(PriceTovara);
+            korzina.games[id] = value;
+            if (value == 0)
+            {
+                korzina.games.Remove(id);
+            }
         }
     }
 }

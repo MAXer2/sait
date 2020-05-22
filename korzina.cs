@@ -108,7 +108,8 @@ namespace Сайтец
         private void timer1_Tick(object sender, EventArgs e)
         {
             calculateKorzina();
-            SummaLabel.Text = TotalPrice.ToString() + " Р";
+            SummaLabel.Text = korzina.TotalPrice.ToString() + " Р";
+            korzina_Load(sender, e);
         }
     }
 }
